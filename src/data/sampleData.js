@@ -186,4 +186,5 @@ export const INITIAL_SETTINGS = {
   portfolioSize: '10000',
   defaultRiskPct: '1',
   anthropicApiKey: '',
+  aiMode: 'claudecom', // 'api' | 'claudecom'
 };

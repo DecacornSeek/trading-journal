@@ -2,6 +2,21 @@
 // Call claude(prompt) for a one-shot string completion
 // Call claude({ messages }) for a multi-turn conversation
 
+export function getAiMode() {
+  try {
+    const s = JSON.parse(localStorage.getItem('tradelog_settings') || '{}');
+    return s.aiMode || 'claudecom';
+  } catch { return 'claudecom'; }
+}
+
+export function buildCoachPrompt(systemPrimer, messages, newMessage) {
+  const history = messages.length > 0
+    ? '\n\n---\nPREVIOUS CONVERSATION:\n' +
+      messages.map(m => `${m.role === 'user' ? 'You' : 'Coach'}: ${m.content}`).join('\n\n')
+    : '';
+  return `${systemPrimer}${history}\n\n---\n\nMy question: ${newMessage}`;
+}
+
 export async function callClaude(input) {
   const settings = JSON.parse(localStorage.getItem('tradelog_settings') || '{}');
   const apiKey = settings.anthropicApiKey || '';

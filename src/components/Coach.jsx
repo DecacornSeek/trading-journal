@@ -1,5 +1,5 @@
 import { useState, useRef, useMemo, useCallback } from 'react';
-import { callClaude } from '../lib/claude';
+import { callClaude, getAiMode, buildCoachPrompt } from '../lib/claude';
 
 const C = {
   card: '#1a1d27', border: '#1e2130', border2: '#2a2e39',
@@ -128,6 +128,175 @@ function EmptyState({ onPrompt }) {
   );
 }
 
+// ─── Claude.com mode (no API key needed) ─────────────────────────────────────
+function ClaudeComMode({ systemPrimer, trades, learnings }) {
+  const [question, setQuestion] = useState('');
+  const [toast, setToast] = useState('');
+
+  const openInClaude = (text) => {
+    const q = (text || question).trim();
+    if (!q) return;
+    const prompt = buildCoachPrompt(systemPrimer, [], q);
+    navigator.clipboard.writeText(prompt).then(() => {
+      window.open('https://claude.ai/new', '_blank', 'noopener,noreferrer');
+      setToast('Context copied! Press Ctrl+V in Claude.com to paste.');
+      setTimeout(() => setToast(''), 6000);
+      if (!text) setQuestion('');
+    }).catch(() => {
+      // Clipboard failed — still open, show manual copy instruction
+      window.open('https://claude.ai/new', '_blank', 'noopener,noreferrer');
+      setToast('Open Claude.com and paste your context manually.');
+      setTimeout(() => setToast(''), 6000);
+    });
+  };
+
+  const handleKey = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); openInClaude(); }
+  };
+
+  return (
+    <div style={{ padding: '0 24px', display: 'flex', gap: 20, height: 'calc(100vh - 112px)' }}>
+      {/* Main */}
+      <div style={{
+        flex: 1, display: 'flex', flexDirection: 'column',
+        background: '#0f1117', border: `1px solid ${C.border}`, borderRadius: 14, overflow: 'hidden',
+      }}>
+        {/* Header */}
+        <div style={{ padding: '18px 22px', borderBottom: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <div style={{
+            width: 40, height: 40, borderRadius: '50%',
+            background: 'linear-gradient(135deg, #7c3aed, #a78bfa)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, color: '#fff', flexShrink: 0,
+          }}>✦</div>
+          <div>
+            <div style={{ fontWeight: 700, color: C.text, fontSize: 15 }}>AI Trading Coach</div>
+            <div style={{ fontSize: 12, color: C.muted }}>
+              Claude.com mode · {trades.length} trades · {learnings.length} lessons in context
+            </div>
+          </div>
+        </div>
+
+        <div style={{ flex: 1, overflowY: 'auto', padding: 24 }}>
+          {/* Toast */}
+          {toast && (
+            <div style={{
+              marginBottom: 16, padding: '12px 16px', borderRadius: 10,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              color: '#86efac', fontSize: 13.5, display: 'flex', alignItems: 'center', gap: 10,
+            }}>
+              <span style={{ fontSize: 16 }}>✓</span> {toast}
+            </div>
+          )}
+
+          {/* How-to card */}
+          <div style={{
+            padding: '18px 20px', borderRadius: 12, marginBottom: 20,
+            background: 'rgba(124,58,237,0.08)', border: '1px solid rgba(124,58,237,0.25)',
+          }}>
+            <div style={{ fontWeight: 600, color: '#c4b5fd', fontSize: 13.5, marginBottom: 10 }}>How this works</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {[
+                ['①', 'Type your coaching question below'],
+                ['②', 'Click "Open in Claude.com"'],
+                ['③', 'Claude.com opens and your full trade context is copied to clipboard'],
+                ['④', <>Press <kbd style={{ background: '#1e2130', padding: '1px 6px', borderRadius: 4, fontSize: 11, color: C.text }}>Ctrl+V</kbd> to paste — then chat naturally</>],
+              ].map(([n, text]) => (
+                <div key={n} style={{ display: 'flex', gap: 12, fontSize: 13, color: C.muted, lineHeight: 1.5 }}>
+                  <span style={{ color: C.purple, fontWeight: 700, flexShrink: 0 }}>{n}</span>
+                  <span>{text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Project tip */}
+          <div style={{
+            padding: '14px 16px', borderRadius: 10, marginBottom: 20,
+            background: C.card, border: `1px solid ${C.border}`,
+          }}>
+            <div style={{ fontWeight: 600, color: C.text, fontSize: 13, marginBottom: 6 }}>
+              💡 Pro tip — Claude Projects
+            </div>
+            <div style={{ fontSize: 12.5, color: C.muted, lineHeight: 1.6 }}>
+              Create a Project on Claude.com called <em style={{ color: C.text }}>"NCI Trading Coach"</em> and paste
+              your trading rules into the project instructions. Then you skip pasting context every time.
+            </div>
+            <a href="https://claude.ai/projects" target="_blank" rel="noopener noreferrer"
+              style={{ display: 'inline-block', marginTop: 8, fontSize: 12, color: '#a78bfa', textDecoration: 'none', fontWeight: 500 }}>
+              Set up a project →
+            </a>
+          </div>
+
+          {/* Quick prompts */}
+          <div style={{ fontSize: 11, fontWeight: 700, color: C.dim, letterSpacing: '0.08em', marginBottom: 10 }}>QUICK PROMPTS</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {QUICK_PROMPTS.map((q, i) => (
+              <button key={i} onClick={() => openInClaude(q)} style={{
+                background: 'rgba(167,139,250,0.08)', border: '1px solid rgba(167,139,250,0.2)',
+                color: C.purple, borderRadius: 8, padding: '10px 14px', fontSize: 13,
+                cursor: 'pointer', textAlign: 'left', lineHeight: 1.4,
+              }}>
+                {q}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Input row */}
+        <div style={{ padding: '12px 16px', borderTop: `1px solid ${C.border}`, display: 'flex', gap: 10, alignItems: 'flex-end' }}>
+          <textarea
+            value={question}
+            onChange={e => setQuestion(e.target.value)}
+            onKeyDown={handleKey}
+            placeholder="Type your question… (Enter to open Claude.com)"
+            rows={2}
+            style={{
+              flex: 1, background: '#131722', border: `1px solid ${C.border2}`,
+              borderRadius: 9, color: C.text, padding: '8px 12px', fontSize: 13.5,
+              resize: 'none', outline: 'none', fontFamily: 'inherit',
+            }}
+          />
+          <button onClick={() => openInClaude()} disabled={!question.trim()} style={{
+            background: question.trim()
+              ? 'linear-gradient(135deg, #7c3aed, #a78bfa)'
+              : '#2a2e39',
+            border: 'none', borderRadius: 9, padding: '10px 16px',
+            color: '#fff', fontSize: 12.5, fontWeight: 600,
+            cursor: question.trim() ? 'pointer' : 'default',
+            transition: 'background 0.15s', whiteSpace: 'nowrap', lineHeight: 1.4,
+          }}>
+            Open in<br />Claude.com →
+          </button>
+        </div>
+      </div>
+
+      {/* Right sidebar */}
+      <div style={{ width: 220, flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16 }}>
+          <div style={{ fontWeight: 600, color: C.text, marginBottom: 12, fontSize: 13 }}>Context loaded</div>
+          {[
+            ['Trades', trades.length, C.text],
+            ['Lessons', learnings.length, C.text],
+            ['Wins', trades.filter(t => t.win_loss === 'win').length, '#22c55e'],
+            ['Losses', trades.filter(t => t.win_loss === 'loss').length, '#ef4444'],
+          ].map(([label, val, color]) => (
+            <div key={label} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12.5, marginBottom: 6 }}>
+              <span style={{ color: C.muted }}>{label}</span>
+              <span style={{ color, fontWeight: 600 }}>{val}</span>
+            </div>
+          ))}
+        </div>
+        <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16 }}>
+          <div style={{ fontWeight: 600, color: C.text, marginBottom: 8, fontSize: 13 }}>Have an API key?</div>
+          <div style={{ fontSize: 12.5, color: C.muted, lineHeight: 1.6 }}>
+            Switch to API mode in Settings for in-app chat without leaving the journal.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Coach ────────────────────────────────────────────────────────────────────
 export default function Coach({ trades, learnings }) {
   const [messages, setMessages] = useState([]);
@@ -196,6 +365,12 @@ COACHING RULES:
   const handleKey = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); }
   };
+
+  // Route to Claude.com mode if selected in settings
+  const aiMode = getAiMode();
+  if (aiMode === 'claudecom') {
+    return <ClaudeComMode systemPrimer={systemPrimer} trades={trades} learnings={learnings} />;
+  }
 
   return (
     <div style={{ padding: '0 24px', display: 'flex', gap: 20, height: 'calc(100vh - 112px)' }}>

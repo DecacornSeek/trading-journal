@@ -66,34 +66,84 @@ export default function Settings({ settings, onSave, tags, onAddTag, onDeleteTag
           </div>
         </div>
 
-        <Section title="AI COACH — ANTHROPIC API" />
-        <div style={{ marginBottom: 14 }}>
-          <Label>Anthropic API Key</Label>
-          <div style={{ display: 'flex', gap: 8 }}>
-            <input
-              type={showKey ? 'text' : 'password'}
-              value={form.anthropicApiKey || ''}
-              onChange={e => set('anthropicApiKey', e.target.value)}
-              placeholder="sk-ant-api03-…"
-              style={{ ...inp, flex: 1, fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5 }}
-              autoComplete="off"
-            />
-            <button onClick={() => setShowKey(s => !s)} style={{
-              background: '#1e2130', border: `1px solid ${C.border2}`, color: C.muted,
-              borderRadius: 7, padding: '0 12px', fontSize: 13, cursor: 'pointer', flexShrink: 0,
-            }}>
-              {showKey ? '🙈' : '👁'}
-            </button>
-          </div>
-          <div style={{ fontSize: 12, color: C.dim, marginTop: 6 }}>
-            Used for AI Post-Mortem and Coach features. Stored locally in your browser.
-            Get your key at{' '}
-            <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer"
-              style={{ color: C.blue }}>
-              console.anthropic.com
-            </a>
+        <Section title="AI INTEGRATION" />
+        {/* AI Mode toggle */}
+        <div style={{ marginBottom: 18 }}>
+          <Label>AI Mode</Label>
+          <div style={{ display: 'flex', gap: 0, borderRadius: 9, overflow: 'hidden', border: `1px solid ${C.border2}`, width: 'fit-content' }}>
+            {[
+              { value: 'claudecom', label: '✦  Claude.com', sub: 'Use your subscription' },
+              { value: 'api', label: '⚡  Anthropic API', sub: 'Pay-per-use key' },
+            ].map(opt => {
+              const active = (form.aiMode || 'claudecom') === opt.value;
+              return (
+                <button key={opt.value} onClick={() => set('aiMode', opt.value)} style={{
+                  padding: '10px 20px', background: active ? '#7c3aed' : 'transparent',
+                  color: active ? '#fff' : C.muted, border: 'none', cursor: 'pointer',
+                  fontWeight: active ? 600 : 400, fontSize: 13.5, transition: 'all 0.15s',
+                  minWidth: 160,
+                }}>
+                  <div>{opt.label}</div>
+                  <div style={{ fontSize: 11, opacity: 0.75, marginTop: 2 }}>{opt.sub}</div>
+                </button>
+              );
+            })}
           </div>
         </div>
+
+        {/* Claude.com mode info */}
+        {(form.aiMode || 'claudecom') === 'claudecom' && (
+          <div style={{
+            marginBottom: 14, padding: '14px 16px', borderRadius: 10,
+            background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.3)',
+          }}>
+            <div style={{ fontWeight: 600, color: '#c4b5fd', fontSize: 13, marginBottom: 6 }}>
+              ✦ Using your Claude.com subscription
+            </div>
+            <div style={{ fontSize: 12.5, color: C.muted, lineHeight: 1.6 }}>
+              The AI Coach will format your full trading context and open Claude.com in a new tab.
+              Just paste with <kbd style={{ background: '#1e2130', padding: '1px 5px', borderRadius: 4, fontSize: 11 }}>Ctrl+V</kbd> and chat.
+            </div>
+            <div style={{ marginTop: 10 }}>
+              <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" style={{
+                fontSize: 12, color: '#a78bfa', textDecoration: 'none', fontWeight: 500,
+              }}>
+                Open Claude.com →
+              </a>
+            </div>
+          </div>
+        )}
+
+        {/* API key — only shown in api mode */}
+        {(form.aiMode || 'claudecom') === 'api' && (
+          <div style={{ marginBottom: 14 }}>
+            <Label>Anthropic API Key</Label>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <input
+                type={showKey ? 'text' : 'password'}
+                value={form.anthropicApiKey || ''}
+                onChange={e => set('anthropicApiKey', e.target.value)}
+                placeholder="sk-ant-api03-…"
+                style={{ ...inp, flex: 1, fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5 }}
+                autoComplete="off"
+              />
+              <button onClick={() => setShowKey(s => !s)} style={{
+                background: '#1e2130', border: `1px solid ${C.border2}`, color: C.muted,
+                borderRadius: 7, padding: '0 12px', fontSize: 13, cursor: 'pointer', flexShrink: 0,
+              }}>
+                {showKey ? '🙈' : '👁'}
+              </button>
+            </div>
+            <div style={{ fontSize: 12, color: C.dim, marginTop: 6 }}>
+              Used for AI Coach and Post-Mortem. Stored locally in your browser only.
+              Get your key at{' '}
+              <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer"
+                style={{ color: C.blue }}>
+                console.anthropic.com
+              </a>
+            </div>
+          </div>
+        )}
 
         <Section title="TAGS" />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 14 }}>
