@@ -10,7 +10,7 @@ export const SAMPLE_TRADES = [
     tags: ['Liquidity Sweep', 'BOS', 'FVG'],
     session: 'London', btc_outlook: null,
     checklist_score: 6, checklist_result: 'go',
-    exit_price: null, pre_emotion: '', post_emotion: '',
+    exit_price: null, exit_date: '2026-04-28T11:30:00', pre_emotion: '', post_emotion: '',
   },
   {
     id: 2, trade_type: 'real', date: '2026-04-28T14:30:00', pair: 'BTCUSD', direction: 'short',
@@ -22,7 +22,7 @@ export const SAMPLE_TRADES = [
     tags: ['Revenge Trade', 'OB'],
     session: 'NY', btc_outlook: 'Bearish',
     checklist_score: 4, checklist_result: 'caution',
-    exit_price: null, pre_emotion: '', post_emotion: '',
+    exit_price: null, exit_date: '2026-04-28T15:15:00', pre_emotion: '', post_emotion: '',
   },
   {
     id: 3, trade_type: 'real', date: '2026-04-29T10:00:00', pair: 'GBPUSD', direction: 'long',
@@ -34,7 +34,7 @@ export const SAMPLE_TRADES = [
     tags: ['FVG', 'Engulfing', 'Break & Retest'],
     session: 'London', btc_outlook: null,
     checklist_score: 7, checklist_result: 'go',
-    exit_price: null, pre_emotion: '', post_emotion: '',
+    exit_price: null, exit_date: '2026-04-29T11:45:00', pre_emotion: '', post_emotion: '',
   },
   {
     id: 4, trade_type: 'real', date: '2026-04-29T15:45:00', pair: 'SOLUSDT', direction: 'long',
@@ -46,7 +46,7 @@ export const SAMPLE_TRADES = [
     tags: ['Liquidity Sweep', 'BOS'],
     session: 'NY', btc_outlook: 'Bullish',
     checklist_score: 6, checklist_result: 'go',
-    exit_price: null, pre_emotion: '', post_emotion: '',
+    exit_price: null, exit_date: '2026-04-29T18:45:00', pre_emotion: '', post_emotion: '',
   },
   {
     id: 5, trade_type: 'real', date: '2026-04-30T09:30:00', pair: 'GOLD', direction: 'short',
@@ -58,7 +58,7 @@ export const SAMPLE_TRADES = [
     tags: ['News Day', 'OB'],
     session: 'NY', btc_outlook: null,
     checklist_score: 3, checklist_result: 'caution',
-    exit_price: null, pre_emotion: '', post_emotion: '',
+    exit_price: null, exit_date: '2026-04-30T10:00:00', pre_emotion: '', post_emotion: '',
   },
   {
     id: 6, trade_type: 'real', date: '2026-04-30T14:00:00', pair: 'EURUSD', direction: 'short',
@@ -70,7 +70,7 @@ export const SAMPLE_TRADES = [
     tags: ['OB', 'BOS'],
     session: 'NY', btc_outlook: null,
     checklist_score: 6, checklist_result: 'go',
-    exit_price: null, pre_emotion: '', post_emotion: '',
+    exit_price: null, exit_date: '2026-04-30T15:00:00', pre_emotion: '', post_emotion: '',
   },
   {
     id: 7, trade_type: 'paper', date: '2026-05-01T09:15:00', pair: 'BTCUSD', direction: 'long',
@@ -82,7 +82,7 @@ export const SAMPLE_TRADES = [
     tags: ['FVG', 'Break & Retest'],
     session: 'London', btc_outlook: 'Bullish',
     checklist_score: 7, checklist_result: 'go',
-    exit_price: null, pre_emotion: '', post_emotion: '',
+    exit_price: null, exit_date: '2026-05-01T13:15:00', pre_emotion: '', post_emotion: '',
   },
   {
     id: 8, trade_type: 'real', date: '2026-05-03T10:30:00', pair: 'WIFUSDT', direction: 'long',
@@ -94,7 +94,7 @@ export const SAMPLE_TRADES = [
     tags: ['Liquidity Sweep', 'BOS', 'Engulfing'],
     session: 'London', btc_outlook: 'Bullish',
     checklist_score: 6, checklist_result: 'go',
-    exit_price: null, pre_emotion: '', post_emotion: '',
+    exit_price: null, exit_date: null, pre_emotion: '', post_emotion: '',
   },
 ];
 

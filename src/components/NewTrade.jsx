@@ -144,6 +144,7 @@ const EMPTY = {
   trade_type: 'real', date: new Date().toISOString().slice(0, 16),
   pair: '', direction: 'long', timeframe: '15m',
   entry_price: '', stop_loss: '', take_profit: '', exit_price: '',
+  exit_date: '',
   status: 'closed', win_loss: 'win',
   pnl_dollars: '', actual_rr: '',
   confidence: 3, discipline: 3,
@@ -197,6 +198,7 @@ export default function NewTrade({ tags, editTrade, onSave }) {
       stop_loss: parseFloat(form.stop_loss) || 0,
       take_profit: parseFloat(form.take_profit) || 0,
       exit_price: form.exit_price ? parseFloat(form.exit_price) : null,
+      exit_date: form.exit_date || null,
       pnl_dollars: form.pnl_dollars ? parseFloat(form.pnl_dollars) : null,
       actual_rr: form.actual_rr ? parseFloat(form.actual_rr) : null,
       checklist_result: result,
@@ -361,6 +363,11 @@ export default function NewTrade({ tags, editTrade, onSave }) {
                 <Label>Exit Price</Label>
                 <input type="number" step="any" value={form.exit_price || ''}
                   onChange={e => set('exit_price', e.target.value)} style={inp} placeholder="0.0000" />
+              </div>
+              <div>
+                <Label>Close Date & Time</Label>
+                <input type="datetime-local" value={form.exit_date || ''}
+                  onChange={e => set('exit_date', e.target.value)} style={inp} />
               </div>
               <div>
                 <Label>P&L ($)</Label>

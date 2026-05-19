@@ -14,6 +14,19 @@ const inp = {
   fontFamily: 'inherit',
 };
 
+function calcDuration(entry, exit) {
+  if (!entry || !exit) return null;
+  const ms = new Date(exit) - new Date(entry);
+  if (ms <= 0) return null;
+  const totalMins = Math.floor(ms / 60000);
+  const days = Math.floor(totalMins / 1440);
+  const hours = Math.floor((totalMins % 1440) / 60);
+  const mins = totalMins % 60;
+  if (days > 0) return `${days}d ${hours}h`;
+  if (hours > 0) return `${hours}h ${mins}m`;
+  return `${mins}m`;
+}
+
 function FilterPill({ label, active, onClick, count }) {
   return (
     <button onClick={onClick} style={{
@@ -255,6 +268,8 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
             ['Exit Price', trade.exit_price || '—'],
             ['Date', new Date(trade.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })],
             ['Timeframe', trade.timeframe],
+            ...(trade.exit_date ? [['Duration', calcDuration(trade.date, trade.exit_date) || '—']] : []),
+            ...(trade.exit_date ? [['Close', new Date(trade.exit_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ' ' + new Date(trade.exit_date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })]] : []),
           ].map(([label, val]) => (
             <div key={label} style={{
               background: C.card, border: `1px solid ${C.border}`, borderRadius: 9, padding: '10px 14px',
@@ -375,20 +390,6 @@ export default function Journal({ trades, tags, learnings, onSelectTrade, select
   const [sortKey, setSortKey] = useState('date');
   const [sortDir, setSortDir] = useState(-1); // -1=desc
 
-  if (selectedTrade) {
-    return (
-      <div style={{ padding: '0 24px' }}>
-        <TradeDetail
-          trade={selectedTrade}
-          tags={tags}
-          learnings={learnings}
-          onBack={() => onSelectTrade(null)}
-          onEdit={() => onEdit(selectedTrade)}
-        />
-      </div>
-    );
-  }
-
   const filtered = useMemo(() => {
     let t = [...trades];
     if (search) {
@@ -413,6 +414,20 @@ export default function Journal({ trades, tags, learnings, onSelectTrade, select
     });
     return t;
   }, [trades, search, typeFilter, resultFilter, sortKey, sortDir]);
+
+  if (selectedTrade) {
+    return (
+      <div style={{ padding: '0 24px' }}>
+        <TradeDetail
+          trade={selectedTrade}
+          tags={tags}
+          learnings={learnings}
+          onBack={() => onSelectTrade(null)}
+          onEdit={() => onEdit(selectedTrade)}
+        />
+      </div>
+    );
+  }
 
   const handleSort = (key) => {
     if (sortKey === key) setSortDir(d => -d);
