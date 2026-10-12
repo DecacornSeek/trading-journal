@@ -1,0 +1,175 @@
+//@version=6
+// Profil-Level für das Replay-Journal (Handoff v0.2, Aufgabe 2)
+// Gibt alle Profilwerte als Plots aus, damit data_get_study_values sie am
+// Entry-Bar lesen kann: Session-, Anker- und Wochen-Profil (POC/VAH/VAL),
+// offene Vorwochen-VPOCs und Bar-Messungen (Volumen, Spanne, Schlussposition).
+// Schwellen (Absorption, Lethargie) werden hier bewusst NICHT gesetzt — nur gemessen.
+indicator("Profil-Level · Replay-Journal", shorttitle="ProfilLvl", overlay=true, max_bars_back=5000)
+
+// ── Eingaben ────────────────────────────────────────────────────────────────
+grpP          = "Profil"
+bucketIn      = input.float(0.0, "Bucket-Größe (Preis, 0 = auto)", minval=0, group=grpP,
+     tooltip="0 = automatisch: 0,05 % des Preises beim Profilstart, auf Tick gerundet. Für vergleichbare Einträge besser fest einstellen.")
+vaPct         = input.float(70, "Value Area %", minval=10, maxval=99, group=grpP) / 100
+maxRowsPerBar = input.int(300, "Max. Buckets pro Bar", minval=10, maxval=2000, group=grpP,
+     tooltip="Breitere Bars werden komplett auf den HLC3-Bucket gebucht")
+calcBars      = input.int(3000, "POC/VA nur für die letzten N Bars berechnen", minval=100, group=grpP,
+     tooltip="Spart Rechenzeit. Volumen wird trotzdem über die ganze Historie gesammelt.")
+
+grpA    = "Anker-Profil"
+anchorT = input.time(timestamp("UTC", 2026, 10, 1, 0, 0), "Anker-Start", confirm=true, group=grpA)
+
+grpW   = "Wochen-VPOCs"
+nWeeks = input.int(3, "Offene Vorwochen-VPOCs anzeigen (max 5)", minval=0, maxval=5, group=grpW)
+
+grpV   = "Bar-Messung"
+lenAvg = input.int(20, "Ø-Länge", minval=2, group=grpV)
+
+// ── Profil-Typ ──────────────────────────────────────────────────────────────
+// Volumen pro Preis-Bucket; Schlüssel = floor(preis / bucket)
+type Profile
+    map<int, float> vol
+    float bucket = na
+    int   loKey  = na
+    int   hiKey  = na
+    float poc    = na
+    float vah    = na
+    float val    = na
+
+autoBucket(float px) =>
+    math.max(syminfo.mintick, math.round(px * 0.0005 / syminfo.mintick) * syminfo.mintick)
+
+newProfile(float px) =>
+    Profile.new(map.new<int, float>(), bucketIn > 0 ? bucketIn : autoBucket(px))
+
+// Bar-Volumen gleichmäßig über die Buckets von Low bis High verteilen
+method add(Profile p, float h, float l, float c, float v) =>
+    if not na(v) and v > 0
+        int k0 = math.floor(l / p.bucket)
+        int k1 = math.floor(h / p.bucket)
+        if k1 - k0 + 1 > maxRowsPerBar
+            k0 := math.floor(c / p.bucket)
+            k1 := k0
+        float share = v / (k1 - k0 + 1)
+        for k = k0 to k1
+            p.vol.put(k, nz(p.vol.get(k)) + share)
+        p.loKey := na(p.loKey) ? k0 : math.min(p.loKey, k0)
+        p.hiKey := na(p.hiKey) ? k1 : math.max(p.hiKey, k1)
+    p
+
+// POC = Bucket mit max. Volumen (bei Gleichstand der tiefere);
+// Value Area: vom POC aus jeweils den volumenstärkeren Nachbarn hinzufügen
+method compute(Profile p) =>
+    if not na(p.loKey)
+        float total = 0.0
+        float best  = -1.0
+        int   pocK  = p.loKey
+        for k = p.loKey to p.hiKey
+            float x = nz(p.vol.get(k))
+            total += x
+            if x > best
+                best := x
+                pocK := k
+        float acc = best
+        int lo = pocK
+        int hi = pocK
+        while acc < total * vaPct and (lo > p.loKey or hi < p.hiKey)
+            float up = hi < p.hiKey ? nz(p.vol.get(hi + 1)) : -1.0
+            float dn = lo > p.loKey ? nz(p.vol.get(lo - 1)) : -1.0
+            if up >= dn
+                hi  += 1
+                acc += up
+            else
+                lo  -= 1
+                acc += dn
+        p.poc := (pocK + 0.5) * p.bucket
+        p.vah := (hi + 1) * p.bucket
+        p.val := lo * p.bucket
+    p
+
+// ── Zustand ─────────────────────────────────────────────────────────────────
+bool newDay  = timeframe.change("D")   // Session = Kalendertag in Börsen-Zeitzone (Krypto: UTC)
+bool newWeek = timeframe.change("W")   // TradingView-Woche (Krypto: Montag 00:00 UTC)
+bool inCalc  = bar_index >= last_bar_index - calcBars
+
+var Profile sP = newProfile(open)
+var Profile wP = newProfile(open)
+var Profile aP = na
+var array<float> openVpocs = array.new<float>()   // neueste zuletzt
+
+if newDay and bar_index > 0
+    sP := newProfile(open)
+
+if newWeek and bar_index > 0
+    wP.compute()
+    if not na(wP.poc)
+        openVpocs.push(wP.poc)
+        if openVpocs.size() > 20
+            openVpocs.shift()
+    wP := newProfile(open)
+
+// Vorwochen-VPOC gilt als "repariert", sobald ein Bar ihn berührt
+if openVpocs.size() > 0
+    for i = openVpocs.size() - 1 to 0
+        float v = openVpocs.get(i)
+        if low <= v and high >= v
+            openVpocs.remove(i)
+
+if time >= anchorT and na(aP)
+    aP := newProfile(open)
+
+sP.add(high, low, hlc3, volume)
+wP.add(high, low, hlc3, volume)
+if not na(aP)
+    aP.add(high, low, hlc3, volume)
+
+if inCalc
+    sP.compute()
+    wP.compute()
+    if not na(aP)
+        aP.compute()
+
+vpocN(int n) =>
+    int sz = openVpocs.size()
+    n < nWeeks and n < sz ? openVpocs.get(sz - 1 - n) : na
+
+// ── Bar-Messungen (Absorption / Geschwindigkeit, ohne Schwellen) ────────────
+float rng      = high - low
+float volRatio = volume / ta.sma(volume, lenAvg)
+float rngRatio = rng / ta.sma(rng, lenAvg)
+float closePos = rng > 0 ? (close - low) / rng : 0.5
+float wickUp   = rng > 0 ? (high - math.max(open, close)) / rng : 0.0
+float wickDn   = rng > 0 ? (math.min(open, close) - low) / rng : 0.0
+
+// ── Ausgabe ─────────────────────────────────────────────────────────────────
+float sPoc = inCalc ? sP.poc : na
+float sVah = inCalc ? sP.vah : na
+float sVal = inCalc ? sP.val : na
+float wPoc = inCalc ? wP.poc : na
+float aPoc = inCalc and not na(aP) ? aP.poc : na
+float aVah = inCalc and not na(aP) ? aP.vah : na
+float aVal = inCalc and not na(aP) ? aP.val : na
+
+color cS = newDay  ? na : color.new(color.orange, 0)
+color cW = newWeek ? na : color.new(color.fuchsia, 0)
+
+plot(sPoc, "Session POC", cS, 2, plot.style_linebr)
+plot(sVah, "Session VAH", newDay ? na : color.new(color.orange, 50), 1, plot.style_linebr)
+plot(sVal, "Session VAL", newDay ? na : color.new(color.orange, 50), 1, plot.style_linebr)
+plot(aPoc, "Anker POC", color.new(color.aqua, 0), 2, plot.style_linebr)
+plot(aVah, "Anker VAH", color.new(color.aqua, 50), 1, plot.style_linebr)
+plot(aVal, "Anker VAL", color.new(color.aqua, 50), 1, plot.style_linebr)
+plot(wPoc, "Wochen-VPOC aktuell", cW, 2, plot.style_linebr)
+plot(vpocN(0), "Offener VPOC W-1", color.new(color.fuchsia, 40), 1, plot.style_linebr)
+plot(vpocN(1), "Offener VPOC W-2", color.new(color.fuchsia, 55), 1, plot.style_linebr)
+plot(vpocN(2), "Offener VPOC W-3", color.new(color.fuchsia, 70), 1, plot.style_linebr)
+plot(vpocN(3), "Offener VPOC W-4", color.new(color.fuchsia, 80), 1, plot.style_linebr)
+plot(vpocN(4), "Offener VPOC W-5", color.new(color.fuchsia, 85), 1, plot.style_linebr)
+
+dw = display.data_window + display.status_line
+plot(volRatio, "Volumen ÷ Ø",           display=dw)
+plot(rngRatio, "Spanne ÷ Ø",            display=dw)
+plot(closePos, "Schlussposition (0-1)", display=dw)
+plot(wickUp,   "Docht oben (Anteil)",   display=dw)
+plot(wickDn,   "Docht unten (Anteil)",  display=dw)
+plot(sP.bucket, "Bucket-Größe Session", display=display.data_window)
