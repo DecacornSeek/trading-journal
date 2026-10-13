@@ -1,0 +1,7 @@
+{
+  "name": "TradeLog — NCI Trading Journal",
+  "description": "Comprehensive trading journal and analytics dashboard for tracking trades, post-mortem reviews, rules checklist, and performance.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

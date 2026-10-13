@@ -173,17 +173,21 @@ function ClaudeComMode({ systemPrimer, trades, learnings, settings }) {
     const q = (text || question).trim();
     if (!q) return;
     const prompt = buildCoachPrompt(systemPrimer, [], q);
-    navigator.clipboard.writeText(prompt).then(() => {
-      window.open('https://claude.ai/new', '_blank', 'noopener,noreferrer');
-      setToast('Context copied! Press Ctrl+V in Claude.com to paste.');
-      setTimeout(() => setToast(''), 6000);
-      if (!text) setQuestion('');
-    }).catch(() => {
-      // Clipboard failed — still open, show manual copy instruction
-      window.open('https://claude.ai/new', '_blank', 'noopener,noreferrer');
-      setToast('Open Claude.com and paste your context manually.');
-      setTimeout(() => setToast(''), 6000);
-    });
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(prompt).catch(() => {});
+    }
+    try {
+      const win = window.open('https://claude.ai/new', '_blank', 'noopener,noreferrer');
+      if (win) {
+        setToast('Context copied! Press Ctrl+V in Claude.com to paste.');
+      } else {
+        setToast('Context copied! Pop-up blocked: use the Claude.com link to open.');
+      }
+    } catch {
+      setToast('Context copied! Open Claude.com and press Ctrl+V to paste.');
+    }
+    setTimeout(() => setToast(''), 6000);
+    if (!text) setQuestion('');
   };
 
   const handleKey = (e) => {
