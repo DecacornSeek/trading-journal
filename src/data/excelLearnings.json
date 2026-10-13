@@ -1,0 +1,236 @@
+[
+    {
+        "id":  "excel-learning-b7",
+        "date":  "2026-04-22",
+        "title":  "Support/Resistance Inversion",
+        "description":  "Yesterday\u0027s support and resistance lines can invert.",
+        "category":  "Key Lessons",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B7"
+    },
+    {
+        "id":  "excel-learning-b8",
+        "date":  "2026-04-22",
+        "title":  "Avoid News Days",
+        "description":  "Don\u0027t trade on news days or when news is expected.",
+        "category":  "Key Lessons",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B8"
+    },
+    {
+        "id":  "excel-learning-b9",
+        "date":  "2026-04-22",
+        "title":  "2-Test Rule",
+        "description":  "Wait for price to test levels twice (the 2-test rule).",
+        "category":  "Key Lessons",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B9"
+    },
+    {
+        "id":  "excel-learning-b10",
+        "date":  "2026-04-22",
+        "title":  "Stop Loss Adjustment",
+        "description":  "Your stop losses are too defensive and should be better placed.",
+        "category":  "Key Lessons",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B10"
+    },
+    {
+        "id":  "excel-learning-b11",
+        "date":  "2026-04-22",
+        "title":  "Wait for Clear Market Signals",
+        "description":  "Focus on clear signals, avoid small consolidations, and look for trends in lower timeframes if trends aren’t obvious in higher timeframes.",
+        "category":  "Key Lessons",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B11"
+    },
+    {
+        "id":  "excel-learning-b12",
+        "date":  "2026-04-22",
+        "title":  "Orderblocks vs. FVGs",
+        "description":  "Order blocks are stronger than fair value gaps (FVGs).",
+        "category":  "Key Lessons",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B12"
+    },
+    {
+        "id":  "excel-learning-b13",
+        "date":  "2026-04-22",
+        "title":  "Price Action",
+        "description":  "If BTC shows weakness, don\u0027t expect a retest of highs.",
+        "category":  "Key Lessons",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B13"
+    },
+    {
+        "id":  "excel-learning-b16",
+        "date":  "2026-04-22",
+        "title":  "Wenn der Markt bereits 3-4h gedestributed ist, brauche ich nicht noch reingehen...",
+        "description":  "Wenn der Markt bereits 3-4h gedestributed ist, brauche ich nicht noch reingehen. Ich prüfe kaum noch die Arrays usw. und wohin die Liquidität geht. Eindeutig zuuu viele trades, und bleib in deinen Handelszeiten!",
+        "category":  "Entry Model",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B16"
+    },
+    {
+        "id":  "excel-learning-b17",
+        "date":  "2026-04-22",
+        "title":  "PD Arrays höhere zeitebenen = größere wahrscheinlichkeit --\u003e mit body candle close",
+        "description":  "PD Arrays höhere zeitebenen = größere wahrscheinlichkeit --\u003e mit body candle close",
+        "category":  "Entry Model",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B17"
+    },
+    {
+        "id":  "excel-learning-b18",
+        "date":  "2026-04-22",
+        "title":  "Trend Analysis",
+        "description":  "Identify if the trend is bullish or bearish for both BTC and the pair you\u0027re trading.",
+        "category":  "Entry Model",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B18"
+    },
+    {
+        "id":  "excel-learning-b19",
+        "date":  "2026-04-22",
+        "title":  "Mark Highs/Lows",
+        "description":  "Highlight the key high and low points.",
+        "category":  "Entry Model",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B19"
+    },
+    {
+        "id":  "excel-learning-b20",
+        "date":  "2026-04-22",
+        "title":  "Mark Supply/Demand Zones",
+        "description":  "Focus on important zones, especially on the 4H/1H chart.",
+        "category":  "Entry Model",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B20"
+    },
+    {
+        "id":  "excel-learning-b21",
+        "date":  "2026-04-22",
+        "title":  "Check Fib Levels \u0026 Volume",
+        "description":  "Always consider Fibonacci levels and volume.",
+        "category":  "Entry Model",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B21"
+    },
+    {
+        "id":  "excel-learning-b22",
+        "date":  "2026-04-22",
+        "title":  "Candlestick Patterns",
+        "description":  "Look at the last three candles, especially engulfing patterns, and ensure the asset has momentum and volume.",
+        "category":  "Entry Model",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B22"
+    },
+    {
+        "id":  "excel-learning-b26",
+        "date":  "2026-04-22",
+        "title":  "Reversals",
+        "description":  "Be cautious if a local high/low has barely been swept, as it\u0027s often followed by a reversal.",
+        "category":  "Stop Loss",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B26"
+    },
+    {
+        "id":  "excel-learning-b27",
+        "date":  "2026-04-22",
+        "title":  "Liquidity Sweep",
+        "description":  "Look for anomalies in the chart before acting.",
+        "category":  "Stop Loss",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B27"
+    },
+    {
+        "id":  "excel-learning-b31",
+        "date":  "2026-04-22",
+        "title":  "Purpose",
+        "description":  "Your goal is to make money, particularly to fund your wedding.",
+        "category":  "Psychology",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B31"
+    },
+    {
+        "id":  "excel-learning-b32",
+        "date":  "2026-04-22",
+        "title":  "Buy Low, Sell High",
+        "description":  "Stick to buying when prices are low and selling when high.",
+        "category":  "Psychology",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B32"
+    },
+    {
+        "id":  "excel-learning-b33",
+        "date":  "2026-04-22",
+        "title":  "Multi-Timeframe Analysis",
+        "description":  "Start with the 4H chart and scale down from there.",
+        "category":  "Psychology",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B33"
+    },
+    {
+        "id":  "excel-learning-b34",
+        "date":  "2026-04-22",
+        "title":  "Trend Strength",
+        "description":  "Focus on strong trends or those showing sudden weakness.",
+        "category":  "Psychology",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B34"
+    },
+    {
+        "id":  "excel-learning-b35",
+        "date":  "2026-04-22",
+        "title":  "Weak vs. Strong",
+        "description":  "Focus on weak performers rather than chasing those that are already moving up.",
+        "category":  "Psychology",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B35"
+    },
+    {
+        "id":  "excel-learning-b36",
+        "date":  "2026-04-22",
+        "title":  "Mistakes",
+        "description":  "Avoid buying or shorting in overly green (bullish) or red (bearish) conditions—like the mistake made with PEPE yesterday.",
+        "category":  "Psychology",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "B36"
+    },
+    {
+        "id":  "excel-learning-session-42",
+        "date":  "2026-04-22",
+        "title":  "Distribution - Asia session",
+        "description":  "Workbook session observation: Distribution was associated with the Asia session. Treat this as a hypothesis to validate against labeled trades, not a universal market rule.",
+        "category":  "Session Patterns",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "G42:H42"
+    },
+    {
+        "id":  "excel-learning-session-43",
+        "date":  "2026-04-22",
+        "title":  "Akkumulation - UK and US session",
+        "description":  "Workbook session observation: Akkumulation was associated with the UK and US session. Treat this as a hypothesis to validate against labeled trades, not a universal market rule.",
+        "category":  "Session Patterns",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "G43:H43"
+    },
+    {
+        "id":  "excel-learning-session-46",
+        "date":  "2026-04-22",
+        "title":  "Akkumulation - Asia session",
+        "description":  "Workbook session observation: Akkumulation was associated with the Asia session. Treat this as a hypothesis to validate against labeled trades, not a universal market rule.",
+        "category":  "Session Patterns",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "G46:H46"
+    },
+    {
+        "id":  "excel-learning-session-47",
+        "date":  "2026-04-22",
+        "title":  "Manipulation nach oben - UK session",
+        "description":  "Workbook session observation: Manipulation nach oben was associated with the UK session. Treat this as a hypothesis to validate against labeled trades, not a universal market rule.",
+        "category":  "Session Patterns",
+        "source":  "Trading Journal.xlsm - Learnings",
+        "source_cell":  "G47:H47"
+    }
+]

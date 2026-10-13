@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CLASSIC_ONE_STEP_10K } from '../data/challengeRules';
 
 const C = {
   card: '#1a1d27', border: '#1e2130', border2: '#2a2e39',
@@ -64,6 +65,61 @@ export default function Settings({ settings, onSave, tags, onAddTag, onDeleteTag
             <input type="number" step="0.1" min="0.1" max="10" value={form.defaultRiskPct}
               onChange={e => set('defaultRiskPct', e.target.value)} style={inp} />
           </div>
+        </div>
+
+        <Section title="PROP CHALLENGE" />
+        <div style={{
+          padding: '14px 16px', borderRadius: 10, marginBottom: 14,
+          background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.28)',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+            <input
+              type="checkbox" checked={form.challengeEnabled !== false}
+              onChange={event => set('challengeEnabled', event.target.checked)}
+              style={{ width: 16, height: 16, accentColor: C.blue }}
+            />
+            <div>
+              <div style={{ color: C.text, fontSize: 13.5, fontWeight: 700 }}>
+                Breakout {CLASSIC_ONE_STEP_10K.name}
+              </div>
+              <div style={{ color: C.muted, fontSize: 11.5, marginTop: 2 }}>
+                ${CLASSIC_ONE_STEP_10K.profitTarget} target · ${CLASSIC_ONE_STEP_10K.maxDailyLoss} daily loss · ${CLASSIC_ONE_STEP_10K.drawdownFloor} static floor
+              </div>
+            </div>
+          </div>
+          <div style={{ fontSize: 11.5, color: C.dim, lineHeight: 1.5 }}>
+            Update this snapshot before asking whether a new trade is safe. Use the lower of balance and equity shown on the platform.
+          </div>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+          {[
+            ['Current balance ($)', 'challengeCurrentBalance'],
+            ['Current equity ($)', 'challengeCurrentEquity'],
+            ['Day-start balance ($)', 'challengeDayStartBalance'],
+          ].map(([label, field]) => (
+            <div key={field}>
+              <Label>{label}</Label>
+              <input type="number" step="0.01" value={form[field] ?? ''}
+                onChange={event => set(field, event.target.value)} style={inp} />
+            </div>
+          ))}
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 10, marginTop: 12 }}>
+          {[
+            ['Risk per trade ($)', 'challengeRiskPerTrade', '1'],
+            ['Personal daily stop ($)', 'challengePersonalDailyStop', '1'],
+            ['Maximum trades per day', 'challengeMaxTradesPerDay', '1'],
+            ['Trades taken today', 'challengeTradesToday', '1'],
+          ].map(([label, field, step]) => (
+            <div key={field}>
+              <Label>{label}</Label>
+              <input type="number" min="0" step={step} value={form[field] ?? ''}
+                onChange={event => set(field, event.target.value)} style={inp} />
+            </div>
+          ))}
+        </div>
+        <div style={{ fontSize: 11.5, color: C.dim, lineHeight: 1.5, marginTop: 9 }}>
+          The $50 trade risk, $100 daily stop, and two-trade limit are personal guardrails, not firm rules. They are intentionally stricter because the challenge has no deadline.
         </div>
 
         <Section title="AI INTEGRATION" />

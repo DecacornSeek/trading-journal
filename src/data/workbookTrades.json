@@ -1,0 +1,3438 @@
+[
+    {
+        "id":  "excel-real-row-4",
+        "trade_type":  "real",
+        "date":  "2024-09-07T00:00:00",
+        "pair":  "BTC",
+        "direction":  "short",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -3.4,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "HTF: Selling pressure remains high, Consolidation with 3 tests, 15\u0027 RSI was already  overheated. Targeted pivot line as S/L \n1) Swing high was respected multiple times\n2) 15\u0027 RSI was overheated\n3) Break below 9er EMA",
+        "post_notes":  "In the lower timeframe there was a MS break. However, after retest new high was created and invalidated the consolidation. Lesson: I have not waited fo a confirmation on a LTF",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D4",
+                                    "name":  "Real Trading D4",
+                                    "dataUrl":  "/workbook-images/image1.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E4",
+                                     "name":  "Real Trading E4",
+                                     "dataUrl":  "/workbook-images/image2.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  4,
+        "portfolio_risk":  1.1,
+        "duration_original":  "3",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-5",
+        "trade_type":  "real",
+        "date":  "2024-09-08T00:00:00",
+        "pair":  "BTC",
+        "direction":  "short",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  3.34,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "HTF: Consolidatioon on the weekend with minor break out structure. Retest over Sunday into the OB.\n1) Liquidity sweep on 15\n2) Retest with bearish engulfing\n3) displacement caused by an engulfing 15\n4) Volumen bei dem Liquidity sweep",
+        "post_notes":  "Ist in die Pivot Linie hineingetippt , Markt hat auf den OB reagiert",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D5",
+                                    "name":  "Real Trading D5",
+                                    "dataUrl":  "/workbook-images/image3.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E5",
+                                     "name":  "Real Trading E5",
+                                     "dataUrl":  "/workbook-images/image4.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  5,
+        "portfolio_risk":  1.1,
+        "duration_original":  "2",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-6",
+        "trade_type":  "real",
+        "date":  "2024-09-09T00:00:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  4.3,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3.5,
+        "discipline":  null,
+        "pre_notes":  "Asia session konsolidierung\n1) Jedes mal wenn BTC die Asia Range nach unten verlassen wollte, gab es Buy pressure. Obwohl es klar rote FVG Gaps gab, hat sich der Bullen Markt durchgesetzt\n2) sehr schwaches Displacement von den Sellern - Asia low ausgesweept",
+        "post_notes":  "RSI war nicht überkocht",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D6",
+                                    "name":  "Real Trading D6",
+                                    "dataUrl":  "/workbook-images/image5.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E6",
+                                     "name":  "Real Trading E6",
+                                     "dataUrl":  "/workbook-images/image6.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  6,
+        "portfolio_risk":  1.27,
+        "duration_original":  "1.5",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-7",
+        "trade_type":  "real",
+        "date":  "2024-09-09T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  4.4,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3.5,
+        "discipline":  null,
+        "pre_notes":  "Zwillingstrade mit BTC\n\n1) WIF ist bullish seit einigen Tagen und hatte nun ein Pullback bis zum gestrigen Resistenzlinie --\u003e support geworden\n2) Konsolidierung hat equal lows und fing dann an nach oben zu displacen\n3) Erzeugte eine FVG\n4) Bullishe RSI divergenz auf 5min\n5)",
+        "post_notes":  "Es ging nur noch ein wenig höher als die Pivotlinie bevor es einbrach",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D7",
+                                    "name":  "Real Trading D7",
+                                    "dataUrl":  "/workbook-images/image7.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E7",
+                                     "name":  "Real Trading E7",
+                                     "dataUrl":  "/workbook-images/image8.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  7,
+        "portfolio_risk":  1.97,
+        "duration_original":  "1.5",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-8",
+        "trade_type":  "real",
+        "date":  "2024-09-10T00:00:00",
+        "pair":  "BTC",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  2.46,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Asia Session konsolidierung\n1) Asia hat nach unten konsolidiert, und nach einem kurzen breakout liquidity gesweept und anschliessend ein lokales hoch kreiert\n2) Es folgte ein MSS und ein liquidity sweep\n3) es konnte mehrfach nicht über der R linie vom Vortag bzw dem Swing high schliessen",
+        "post_notes":  "Ich musste den Stopp etwas höher ziehen um den zweiten Liquidity Sweep auszugleichen\nEr ist auf die Pivot Linie gekommen",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D8",
+                                    "name":  "Real Trading D8",
+                                    "dataUrl":  "/workbook-images/image9.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E8",
+                                     "name":  "Real Trading E8",
+                                     "dataUrl":  "/workbook-images/image10.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  8,
+        "portfolio_risk":  2.5,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-9",
+        "trade_type":  "real",
+        "date":  "2024-09-11T00:00:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "3m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -2.57,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  2.5,
+        "discipline":  null,
+        "pre_notes":  "1) Dieser trade war einfach nur schrott, ich habe in einem konsolidierenden Markt gehandelt. Ich habe nicht den HTF angeschaut, keine bestätigung oder confluence",
+        "post_notes":  "Auch im Nachhinein, es war der Tag an dem CPI Daten veröffentlicht werden.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D9",
+                                    "name":  "Real Trading D9",
+                                    "dataUrl":  "/workbook-images/image11.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E9",
+                                     "name":  "Real Trading E9",
+                                     "dataUrl":  "/workbook-images/image12.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  9,
+        "portfolio_risk":  1.1,
+        "duration_original":  "1.1",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-10",
+        "trade_type":  "real",
+        "date":  "2024-09-11T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -3.59,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  2.5,
+        "discipline":  null,
+        "pre_notes":  "Dieser Trade wurde genauso dumm genommen wie der BTC trade",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D10",
+                                    "name":  "Real Trading D10",
+                                    "dataUrl":  "/workbook-images/image13.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E10",
+                                     "name":  "Real Trading E10",
+                                     "dataUrl":  "/workbook-images/image14.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  10,
+        "portfolio_risk":  2.5,
+        "duration_original":  "0.5",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-11",
+        "trade_type":  "real",
+        "date":  "2024-09-12T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -2.5,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Nach einer Konsolidierung und guten CPI Daten war ich bullish gestimmt. \n1) LTF higher lows gebildet, 3x lower prices rejected, Reversl war sehr wahrscheinlich.",
+        "post_notes":  "Ich habe manuell den Trade geschlossen, nachdem er die Pivot linie erreicht hat und BTC ein komisches signal aufgewieseb hat. anschliessend nocheinmal ein Trade eröffnet bei dem ich ca. 2,5 verloren habe.\n\nWeiterhin nicht bei Veröffentlichung von Handelsdaten traden!",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D11",
+                                    "name":  "Real Trading D11",
+                                    "dataUrl":  "/workbook-images/image15.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E11",
+                                     "name":  "Real Trading E11",
+                                     "dataUrl":  "/workbook-images/image16.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  11,
+        "portfolio_risk":  4.55,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-12",
+        "trade_type":  "real",
+        "date":  "2024-09-13T00:00:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  4.26,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) gute CPI Daten, deshalb bullisher Bias\n2) Asia Konsolidation, UK sweep Asia low mit BOS und FVG \n3) 5\u0027 engulfing",
+        "post_notes":  "Es müssen nicht alle PD Arrays gefüllt werden, jedes array hat eine gewisse wahrscheinlichkeit als support oder reistance zu dienen. Wie letztes mal wurde das UK Low displaced, um anschliessend zu laufn",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D12",
+                                    "name":  "Real Trading D12",
+                                    "dataUrl":  "/workbook-images/image17.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E12",
+                                     "name":  "Real Trading E12",
+                                     "dataUrl":  "/workbook-images/image18.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  12,
+        "portfolio_risk":  1.8,
+        "duration_original":  "1.2",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-13",
+        "trade_type":  "real",
+        "date":  "2024-09-13T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -4.18,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "1) Ich habe den Stopp loss nicht unter dem letzten Swing low platziert, sondern unter einem lokalen\n2) Es war am rangieren und ich bin beim Rangieren rein",
+        "post_notes":  "1) Ich habe den Stopp loss nicht unter dem letzten Swing low platziert, sondern unter einem lokalen\n2) Es war am rangieren und ich bin beim Rangieren rein",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D13",
+                                    "name":  "Real Trading D13",
+                                    "dataUrl":  "/workbook-images/image19.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E13",
+                                     "name":  "Real Trading E13",
+                                     "dataUrl":  "/workbook-images/image20.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  13,
+        "portfolio_risk":  1.3,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-14",
+        "trade_type":  "real",
+        "date":  "2024-09-13T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  17.23,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "Swing low auf confirmation der Preis rejection gewartet. Da CPI Daten gut waren und BTC kurz vorm Breakout stand, wusste ich dass das reversal wahrscheinlich war.",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D14",
+                                    "name":  "Real Trading D14",
+                                    "dataUrl":  "/workbook-images/image22.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E14",
+                                     "name":  "Real Trading E14",
+                                     "dataUrl":  "/workbook-images/image23.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  14,
+        "portfolio_risk":  2.65,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-15",
+        "trade_type":  "real",
+        "date":  "2024-09-15T00:00:00",
+        "pair":  "FTM",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  4.22,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3.5,
+        "discipline":  null,
+        "pre_notes":  "FTM war seit Dienstag in einer Konsolidierung und ist am Sonntag aufgrund dessen das BTC gefallen ist aus der Range in den Orderblock gekommen.\n1) Orderblock 2x abgetestet, danach hat er einen BOS verursacht inkl. FVG\n2) Nach retesting hat FTM weitere FVG erzeugt \n3) War mit SUI am stärksten im Plus. Ich wusste, wenn BTC jetzt pusht, wird FTM überproportional pushen",
+        "post_notes":  "Ich bin zu früh raus gegangen weil ich essen gehen wollte",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D15",
+                                    "name":  "Real Trading D15",
+                                    "dataUrl":  "/workbook-images/image24.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E15",
+                                     "name":  "Real Trading E15",
+                                     "dataUrl":  "/workbook-images/image25.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  15,
+        "portfolio_risk":  1.13,
+        "duration_original":  "3",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-16",
+        "trade_type":  "real",
+        "date":  "2024-09-15T00:00:00",
+        "pair":  "SOL",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  0.99,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "Solana war in einem Aufwärtstrend und ist in eine Liquiditätsarea gekommen. Hier hat tippte er kurz in in die vorangegegnage Resistence. Daher war die Wahrscheinlihckeit sehr hoch, dass Buyer zumindest das lokale hoch nocheinmal abtesten.",
+        "post_notes":  "War auch mit ein bisschen Glück verbunden haha",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D16",
+                                    "name":  "Real Trading D16",
+                                    "dataUrl":  "/workbook-images/image26.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E16",
+                                     "name":  "Real Trading E16",
+                                     "dataUrl":  "/workbook-images/image27.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  16,
+        "portfolio_risk":  2.97,
+        "duration_original":  "1.5",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-17",
+        "trade_type":  "real",
+        "date":  "2024-09-18T00:00:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -2.79,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Distribution vor Asia opening, anschliessend flachte der Markt ab und konsolidierte.\n1) Liquidity sweep nach unten,2) BOS 5\u0027 und FVG.",
+        "post_notes":  "Ich habe nicht TP nachgezogen \u0026 habe keine partial profit beim ersten Array genommen",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D17",
+                                    "name":  "Real Trading D17",
+                                    "dataUrl":  "/workbook-images/image28.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E17",
+                                     "name":  "Real Trading E17",
+                                     "dataUrl":  "/workbook-images/image29.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  17,
+        "portfolio_risk":  2.08,
+        "duration_original":  "4",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-18",
+        "trade_type":  "real",
+        "date":  "2024-09-18T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -6.31,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "1) BTC wurde bullish und bin deshalb hier rein gegangen. WIF hatte konsolidiert, higher hgihs gebildet und ein typischwerweise ein kurzes Lower high geformt bevor er distributiert ist",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D18",
+                                    "name":  "Real Trading D18",
+                                    "dataUrl":  "/workbook-images/image30.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E18",
+                                     "name":  "Real Trading E18",
+                                     "dataUrl":  "/workbook-images/image31.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  18,
+        "portfolio_risk":  null,
+        "duration_original":  "4",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-19",
+        "trade_type":  "real",
+        "date":  "2024-09-19T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  5.89,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D19",
+                                    "name":  "Real Trading D19",
+                                    "dataUrl":  "/workbook-images/image32.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E19",
+                                     "name":  "Real Trading E19",
+                                     "dataUrl":  "/workbook-images/image33.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  19,
+        "portfolio_risk":  1.29,
+        "duration_original":  "0.5",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-20",
+        "trade_type":  "real",
+        "date":  "2024-09-19T00:00:00",
+        "pair":  "WIF",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  1.07,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Nach der Buy order habe ich gemerkt, dass WIF exhausted war und habe draufhin eine Sell order eröffnet",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E20",
+                                     "name":  "Real Trading E20",
+                                     "dataUrl":  "/workbook-images/image34.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  20,
+        "portfolio_risk":  0,
+        "duration_original":  "0.1",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-21",
+        "trade_type":  "real",
+        "date":  "2024-09-19T00:00:00",
+        "pair":  "LADIES",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  17.12,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Nachdem Employment Claims positiv waren, wusste ich, dass der Durchbruch kommen wird",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E21",
+                                     "name":  "Real Trading E21",
+                                     "dataUrl":  "/workbook-images/image35.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  21,
+        "portfolio_risk":  null,
+        "duration_original":  "2",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-22",
+        "trade_type":  "real",
+        "date":  "2024-09-19T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  2.18,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Nachdem Employment Claims positiv waren, wusste ich, dass der Durchbruch kommen wird",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E22",
+                                     "name":  "Real Trading E22",
+                                     "dataUrl":  "/workbook-images/image36.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  22,
+        "portfolio_risk":  null,
+        "duration_original":  "2",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-23",
+        "trade_type":  "real",
+        "date":  "2024-09-20T00:00:00",
+        "pair":  "WIF",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  3.14,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) Nach einer Distribution kam ein MS\n2) Anschliessend in Liquiditätszone gekommen und zum letzten High ein EH gebildet, danach abgeschwächelt und dabei ein CHoCH \n3) Nach anschleissendem Retest auf 5\u0027",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D23",
+                                    "name":  "Real Trading D23",
+                                    "dataUrl":  "/workbook-images/image37.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E23",
+                                     "name":  "Real Trading E23",
+                                     "dataUrl":  "/workbook-images/image38.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  23,
+        "portfolio_risk":  1.42,
+        "duration_original":  "0.15",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-24",
+        "trade_type":  "real",
+        "date":  "2024-09-20T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  1.6,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) Nach dem letzten Trade eine Buy-Ordeer eröffnet, weil ich gemerkt habe Buyer in kontrolle  \n2) BTC fing auch an an Momentum zu gewinnen\n3) Ziel war der letzte Orderblock",
+        "post_notes":  "die Pivot linie wurde abgewhrt und stark durchbrochen, daher hätte ich bullish bleiben können. Ausserdem hätte ich partials und break even moven könne",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E24",
+                                     "name":  "Real Trading E24",
+                                     "dataUrl":  "/workbook-images/image39.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  24,
+        "portfolio_risk":  1.33,
+        "duration_original":  "0.15",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-25",
+        "trade_type":  "real",
+        "date":  "2024-09-22T00:00:00",
+        "pair":  "WIF",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -3.23,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  2.5,
+        "discipline":  null,
+        "pre_notes":  "Ich war mir nicht ganz sicher, weil es ein Bärisches Signal gab. Jedoch ist es ja dann wieder nach oben geklettert und in den 1h Orderblock rein",
+        "post_notes":  "Erst rein, wenn es einen Body candle close above OB gib#t. Es gab mehrere PD arrays - jedoch war der 1h OB der wichtigest",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D25",
+                                    "name":  "Real Trading D25",
+                                    "dataUrl":  "/workbook-images/image40.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E25",
+                                     "name":  "Real Trading E25",
+                                     "dataUrl":  "/workbook-images/image41.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  25,
+        "portfolio_risk":  2.5,
+        "duration_original":  "0.15",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-26",
+        "trade_type":  "real",
+        "date":  "2024-09-23T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -2.52,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "WIF war in einem aufwärtstrend und ist ins \n1) fib level des übergordneteten Zeittrends gekommen\n2) inklusive OB gekommen\n3) klarer BOS inkl. FVG",
+        "post_notes":  "Ich wurde ausgestoppt, weil mein Stopp loss zu schwach gesetzt wurde und ich bin manuell rausgegangen, weil bei BTC kurzfristig eine Korrektur war. Jedoch hat es bei WIF zu keinem Unterschie dgefeührt",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D26",
+                                    "name":  "Real Trading D26",
+                                    "dataUrl":  "/workbook-images/image42.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E26",
+                                     "name":  "Real Trading E26",
+                                     "dataUrl":  "/workbook-images/image43.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  26,
+        "portfolio_risk":  2.17,
+        "duration_original":  "0.5",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-27",
+        "trade_type":  "real",
+        "date":  "2024-09-23T00:00:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -4.74,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "BTC war in einem aufwärtstrend und ist ins \n1) fib level des übergordneteten Zeittrends gekommen\n2) inklusive OB gekommen\n3) klarer BOS inkl. FVG",
+        "post_notes":  "Das war einfach ein Shakeout",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D27",
+                                    "name":  "Real Trading D27",
+                                    "dataUrl":  "/workbook-images/image44.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E27",
+                                     "name":  "Real Trading E27",
+                                     "dataUrl":  "/workbook-images/image45.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  27,
+        "portfolio_risk":  1.19,
+        "duration_original":  "0.5",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-28",
+        "trade_type":  "real",
+        "date":  "2024-09-23T00:00:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -5.12,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  1,
+        "discipline":  null,
+        "pre_notes":  "Es gab keine wirkliche Checkliste, ich wollte nur meinen Trade wiederhaben",
+        "post_notes":  "Rachetrade weil ich BTC und WIF wieder reinhaben wollte, habe ich einen sehr großen hebel und Betrag gesetzt. Das hing auch dmait zusammen, dass ich auf der Arbeit egstresst war und es mit einem guten trade vergessen wollte",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D28",
+                                    "name":  "Real Trading D28",
+                                    "dataUrl":  "/workbook-images/image46.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E28",
+                                     "name":  "Real Trading E28",
+                                     "dataUrl":  "/workbook-images/image47.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  28,
+        "portfolio_risk":  null,
+        "duration_original":  "0.2",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-29",
+        "trade_type":  "real",
+        "date":  "2024-09-23T00:00:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "3m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  4.17,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "1) BTC hat seine Widerstände durchbrochen\n und war anschliessen dabei auf das 4h hoch zuzusteuern. Deshalb bbin ich long und habe ca. 1% mitgenommen",
+        "post_notes":  "Insgesamt war der gesame Montag schrott und dasss der Durchbruch kam, war Glück, weil ich erneut reinbin, nach der Preis gefühlt 4-5std gepumpt ist",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D29",
+                                    "name":  "Real Trading D29",
+                                    "dataUrl":  "/workbook-images/image48.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  29,
+        "portfolio_risk":  null,
+        "duration_original":  "0.2",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-30",
+        "trade_type":  "real",
+        "date":  "2024-09-24T00:00:00",
+        "pair":  "FTM",
+        "direction":  "long",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -2.17,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "In einem rangierendem Markt investiert. Es gab keine Form von Liquiditätssweep oder sowas.",
+        "post_notes":  "Ich habe den Trade manuell geschlossen. Hätte ich den Trade laufen lassen, hätte ich es noch geschafft",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D30",
+                                    "name":  "Real Trading D30",
+                                    "dataUrl":  "/workbook-images/image49.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E30",
+                                     "name":  "Real Trading E30",
+                                     "dataUrl":  "/workbook-images/image50.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  30,
+        "portfolio_risk":  null,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-31",
+        "trade_type":  "real",
+        "date":  "2024-09-24T00:00:00",
+        "pair":  "MEW",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  5.7,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "Ich habe mir besodners starke performende Tokens herausgesucht. MEW hat die graue Liquidiätszone erlassen und ist nach einem Pllback in den OB gegangen",
+        "post_notes":  "Bei Altcoins muss es nicht genau in den OB tippen - je kleiner die Altcoins desto ungenauer",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D31",
+                                    "name":  "Real Trading D31",
+                                    "dataUrl":  "/workbook-images/image51.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E31",
+                                     "name":  "Real Trading E31",
+                                     "dataUrl":  "/workbook-images/image52.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  31,
+        "portfolio_risk":  1.22,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-32",
+        "trade_type":  "real",
+        "date":  "2024-09-25T00:00:00",
+        "pair":  "FTM",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  14.49,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Nach dem Liquiditysweep war es klar, dass BTC besonders gefragt ist. 1) FTM ist konsoidert\n2) Liquiditätssweep folgte BOS. Bullish für BTC.",
+        "post_notes":  "Ich habe mich kurz unter der geraden Zahl 0.7 ausszahlen lassen",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D32",
+                                    "name":  "Real Trading D32",
+                                    "dataUrl":  "/workbook-images/image53.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E32",
+                                     "name":  "Real Trading E32",
+                                     "dataUrl":  "/workbook-images/image54.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  32,
+        "portfolio_risk":  1.65,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-33",
+        "trade_type":  "real",
+        "date":  "2024-09-25T00:00:00",
+        "pair":  "FTM",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  5.74,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Nach Schcliessung der Position habe ich auf eine 2. Poisition nach einem Pulback eröffnet. Dabei habe ich danach auf das letzte Hoch gezielt. Erneut wieder tiefer auszahlen lassen",
+        "post_notes":  "Hätte ich mich nicht früher ausgezahlt, wäre der Trade nichtggekoomen",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E33",
+                                     "name":  "Real Trading E33",
+                                     "dataUrl":  "/workbook-images/image55.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  33,
+        "portfolio_risk":  3.68,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-34",
+        "trade_type":  "real",
+        "date":  "2024-09-25T00:00:00",
+        "pair":  "MEW",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  16.48,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Mew war extrem beliebt in den letzten Tagen. 1) Hatt seine Range durchbrochen und steuerte auf das 4h hoch zu",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D34",
+                                    "name":  "Real Trading D34",
+                                    "dataUrl":  "/workbook-images/image56.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  34,
+        "portfolio_risk":  2.59,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-35",
+        "trade_type":  "real",
+        "date":  "2024-09-25T00:00:00",
+        "pair":  "LADIES",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  1.8199999999999998,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "Dieser Trade wurde eröffnet, weil BTC durchbrochen ist.",
+        "post_notes":  "Ich habe den Stopp Loss weiter über der R1 inie platziert.. Und habe mir damit $5 durch die Lappen gehen lassen. Keine partials oder sowas gemacht..",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D35",
+                                    "name":  "Real Trading D35",
+                                    "dataUrl":  "/workbook-images/image57.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  35,
+        "portfolio_risk":  4,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-37",
+        "trade_type":  "real",
+        "date":  "2024-10-20T00:00:00",
+        "pair":  "LPT",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  0,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) Am Vortag 13+, reversal wahrscheinlich\n2) Head and Shoulder, break der neckline",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E37",
+                                     "name":  "Real Trading E37",
+                                     "dataUrl":  "/workbook-images/image59.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  37,
+        "portfolio_risk":  null,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-38",
+        "trade_type":  "real",
+        "date":  "2024-10-20T00:00:00",
+        "pair":  "LPT",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  3.29,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  5,
+        "discipline":  null,
+        "pre_notes":  "1) Wir sind im Aufwärtstrend \n2) Ich habe auf den Pullback gewartet, als dieser einen BOS aufwies habe ich auf dessen Pullback gewartet\n3) Fib-Gold Level",
+        "post_notes":  "Warte geduldig auf den Retest, wenn nach einer Korrektur das erste hoch sich gebildet hat.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D38",
+                                    "name":  "Real Trading D38",
+                                    "dataUrl":  "/workbook-images/image60.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E38",
+                                     "name":  "Real Trading E38",
+                                     "dataUrl":  "/workbook-images/image61.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  38,
+        "portfolio_risk":  2,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-39",
+        "trade_type":  "real",
+        "date":  "2024-10-20T00:00:00",
+        "pair":  "FTM",
+        "direction":  "long",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  1.46,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  5,
+        "discipline":  null,
+        "pre_notes":  "1) Auf Resistenzlinie mit einem Doji getroffen.\n2) anschliessende engulfing kerze 15\u0027, diese Kerze hat die letzte Std eingeholt\n3) Auf 5\u0027 hat sich ein neues Higher-Low geformt\n4) Volumen war sehr hoch",
+        "post_notes":  "Set and forget",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D39",
+                                    "name":  "Real Trading D39",
+                                    "dataUrl":  "/workbook-images/image62.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E39",
+                                     "name":  "Real Trading E39",
+                                     "dataUrl":  "/workbook-images/image63.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  39,
+        "portfolio_risk":  2,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-40",
+        "trade_type":  "real",
+        "date":  "2024-10-28T00:00:00",
+        "pair":  "BTC",
+        "direction":  "short",
+        "timeframe":  "",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -2.5,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3.5,
+        "discipline":  null,
+        "pre_notes":  "1)  Ich bin davon ausgegangen, dass die CME gap wieder gefült wird und war deshalb baerish (30%)\n2) Head and shoulders Pattern formte sich aus\n3) Ich dachte, das pre-market preismanipulation nach oben sei, da es mit relativ wenig volumen und OBV divergenz zeigte",
+        "post_notes":  "Für die CME gaps muss ich den CME chart öffnen\nAuf dem 1h gab es keinen MSS, BOS. Auf dem 15\u0027 war es sehr uneindeutig\n4h bullish, 1h bullish, 15\u0027 unschlüssig ob kontinierung oder umkehr, daanach kam aber klare bestätgigung",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D40",
+                                    "name":  "Real Trading D40",
+                                    "dataUrl":  "/workbook-images/image64.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E40",
+                                     "name":  "Real Trading E40",
+                                     "dataUrl":  "/workbook-images/image65.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  40,
+        "portfolio_risk":  2,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-41",
+        "trade_type":  "real",
+        "date":  "2025-01-28T17:30:00",
+        "pair":  "SOL",
+        "direction":  "long",
+        "timeframe":  "15m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  2,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  2,
+        "discipline":  null,
+        "pre_notes":  "1) Sell off aufgrund von Deepseek.\n2) Pullback zum gestrigen Swing point betrug 60% mit rejection.\n3) Insgesamt gab es netto weniger buyer, welches schwaeche signaliserte\n4) 3\u0027 Head and shoulder pattern mit erfolglosem retest.",
+        "post_notes":  "1) ich bin den traade nicht eingegangen, weil es die die r linie nicht beruehrt hatte. \n2) Weiterhin habe war ich verunsichert, weil es ein neues hoch kreiert hatte\n3) Es gab kein wirklichen widerstand beim durchbruch.\n4) Einfach mal warten und schauen, ob es sich bei neuen Preisniveaus moeglichkeiten auftun.\n5)  Die eigentliche bewegung und bestaetigung kam um 1 uhr",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D41",
+                                    "name":  "Real Trading D41",
+                                    "dataUrl":  "/workbook-images/image66.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E41",
+                                     "name":  "Real Trading E41",
+                                     "dataUrl":  "/workbook-images/image67.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  41,
+        "portfolio_risk":  2,
+        "duration_original":  "15,3",
+        "pivot_today":  "P to R1",
+        "pivot_yesterday":  "S2 to S1"
+    },
+    {
+        "id":  "excel-real-row-42",
+        "trade_type":  "real",
+        "date":  "2025-02-01T13:00:00",
+        "pair":  "ONDO",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "unreviewed",
+        "win_loss":  null,
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  2,
+        "discipline":  null,
+        "pre_notes":  "1) Downtrend \n2) Equal high 15\u0027 mit sweeps in den candlen. Retest created not a new high\n3) Below Pivot, massive sell-off with little buy-pressure",
+        "post_notes":  "1) Trade ruhig aggressiv, wenn 15\u0027 kerze schliesst eingehen.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "baerish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D42",
+                                    "name":  "Real Trading D42",
+                                    "dataUrl":  "/workbook-images/image68.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E42",
+                                     "name":  "Real Trading E42",
+                                     "dataUrl":  "/workbook-images/image69.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  42,
+        "portfolio_risk":  2,
+        "duration_original":  "6",
+        "pivot_today":  "Below P to S1",
+        "pivot_yesterday":  "P to S1 above"
+    },
+    {
+        "id":  "excel-real-row-43",
+        "trade_type":  "real",
+        "date":  "2024-12-24T03:45:00",
+        "pair":  "PEPE",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  2.3,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) Seitwaertsphase nachdem es ein high gebildet hat. Anschliessend eine akkumulation nach unten (liquidity sweep) der eine rally ausloeste\n2) nach letztem Tief welches ein hoch erzeugte, gab es ein Retest mit anschliessender 5\u0027 starker Kerze\nKeine neuen tiefs",
+        "post_notes":  "1) 2rr funktioniert immer gut\n2) Es gab eine Akkumulation und anschliessendem Retest, vielleicht beim Retest erst rein, um guenstigerern Preis zu erhalten?",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "baerish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D43",
+                                    "name":  "Real Trading D43",
+                                    "dataUrl":  "/workbook-images/image70.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E43",
+                                     "name":  "Real Trading E43",
+                                     "dataUrl":  "/workbook-images/image71.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  43,
+        "portfolio_risk":  2.34,
+        "duration_original":  "6,55",
+        "pivot_today":  "Below P to R1",
+        "pivot_yesterday":  "Above S1 to P"
+    },
+    {
+        "id":  "excel-real-row-44",
+        "trade_type":  "real",
+        "date":  "2024-12-24T00:00:00",
+        "pair":  "PEPE",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  3.45,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) Bullish, targeting liquidity.\n2) Retest vom gestrigen Orderblock, welcher den gestriges Tageshoch erzeugt hat.\n3) 15\u0027 Kerze schloss als Hammer am OB.\n4) Moderater abverkauf beim CVD",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "neutral / at execution bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E44",
+                                     "name":  "Real Trading E44",
+                                     "dataUrl":  "/workbook-images/image72.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  44,
+        "portfolio_risk":  2.34,
+        "duration_original":  "11,15",
+        "pivot_today":  "Below P to R1",
+        "pivot_yesterday":  "Below P to R1"
+    },
+    {
+        "id":  "excel-real-row-46",
+        "trade_type":  "real",
+        "date":  "2024-02-17T18:59:00",
+        "pair":  "WIF",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  22,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  5,
+        "discipline":  null,
+        "pre_notes":  "1) 1h Market Struktur. Subsequently consolidation \n2) retest of the MS level with 15\u0027 rejection candle\n3) Traded below P-Niveau for a while",
+        "post_notes":  "Goldener Retracement anvisiert statt R1 niveau. Leicht üeber MS niveau darüber.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "choppy, baerish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D46",
+                                    "name":  "Real Trading D46",
+                                    "dataUrl":  "/workbook-images/image74.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E46",
+                                     "name":  "Real Trading E46",
+                                     "dataUrl":  "/workbook-images/image75.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  46,
+        "portfolio_risk":  2.43,
+        "duration_original":  "12,5",
+        "pivot_today":  "Below P to S1",
+        "pivot_yesterday":  "S1 to P"
+    },
+    {
+        "id":  "excel-real-row-47",
+        "trade_type":  "real",
+        "date":  "2024-02-18T14:35:00",
+        "pair":  "WIF",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  8,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) Baerish , retracement von der gestrigen Kerze danach equal high.\n2) Gewartet auf retracement vom gestrigen Liquidity punkt",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "choppy, baerish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D47",
+                                    "name":  "Real Trading D47",
+                                    "dataUrl":  "/workbook-images/image76.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E47",
+                                     "name":  "Real Trading E47",
+                                     "dataUrl":  "/workbook-images/image77.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  47,
+        "portfolio_risk":  3.43,
+        "duration_original":  "1,25",
+        "pivot_today":  "Below P to S1. Then R1",
+        "pivot_yesterday":  "From P to S2"
+    },
+    {
+        "id":  "excel-real-row-48",
+        "trade_type":  "real",
+        "date":  "2025-02-15T13:35:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -13.48,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "1) Extrem bullisher Freitag\n2)Pullback auf das letzte Niveau welches das Vortages och erzeugt hat. Beim OB gab es 5\u0027 FVG.",
+        "post_notes":  "HTF as the pullback maybe 10% on lower it felt like 70-83%. Das heisst eig, dass es demand eher schwächer ist.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D48",
+                                    "name":  "Real Trading D48",
+                                    "dataUrl":  "/workbook-images/image78.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E48",
+                                     "name":  "Real Trading E48",
+                                     "dataUrl":  "/workbook-images/image79.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  48,
+        "portfolio_risk":  1.9,
+        "duration_original":  "3,25",
+        "pivot_today":  "above P to P",
+        "pivot_yesterday":  "From P to S3"
+    },
+    {
+        "id":  "excel-real-row-49",
+        "trade_type":  "real",
+        "date":  "2025-02-15T18:05:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -9.36,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  2.5,
+        "discipline":  null,
+        "pre_notes":  "1) Extrem bullisher Freitag\n2)Pullback auf das letzte Niveau welches das Vortages och erzeugt hat. Beim OB gab es 5\u0027 FVG.\n3) Dachte weil es oft Liquidity sweeps gibt, dass es vo dort eine Rally nach oben gibt.",
+        "post_notes":  "Habe mehr als 2r getargeet. Sonst wäre es ein Win. Habe nicht den Verlust gecappt.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D49",
+                                    "name":  "Real Trading D49",
+                                    "dataUrl":  "/workbook-images/image80.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E49",
+                                     "name":  "Real Trading E49",
+                                     "dataUrl":  "/workbook-images/image81.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  49,
+        "portfolio_risk":  3.26,
+        "duration_original":  "4",
+        "pivot_today":  "above P to P",
+        "pivot_yesterday":  "From P to S3"
+    },
+    {
+        "id":  "excel-real-row-50",
+        "trade_type":  "real",
+        "date":  "2025-02-16T23:34:00",
+        "pair":  "WIF",
+        "direction":  "short",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  22.36,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) Nachdem es einen richtigen Anstieg gb, gab es MSS. Anschliessender Retest und Fail der MS struktur.\n2) MS Niveau wurde 2d rejected  - gab keine Käufer",
+        "post_notes":  "Standard Modell. MS retest von unten",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "baerish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D50",
+                                    "name":  "Real Trading D50",
+                                    "dataUrl":  "/workbook-images/image82.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E50",
+                                     "name":  "Real Trading E50",
+                                     "dataUrl":  "/workbook-images/image83.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  50,
+        "portfolio_risk":  3.56,
+        "duration_original":  "7",
+        "pivot_today":  "below P to P",
+        "pivot_yesterday":  "P to P"
+    },
+    {
+        "id":  "excel-real-row-60",
+        "trade_type":  "real",
+        "date":  "2025-07-13T10:38:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  1.75,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "Exited without hitting SL. Could have waited.\nBullish flag was forming in the morning. Inefficiencies on the 1\u0027. Entered to target premium zone of Saturday high.\nOverall, last low did not create a new low, making it a weak low. Hence, I was opting for the next high, PDH or at least 78% retracement level.\nI was waiting to hit my TP but exited earlier, because market started to consolidate, it was after 2pm and after a 5\u0027 fvg i exited.",
+        "post_notes":  "1. Keine neuen Trades mehr, nicht zu viele; 2. Risikomanagement. 1-2 Trades, insgesamt pro Tag, nicht mehr riskieren. Risk management is weak bei mir.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D60",
+                                    "name":  "Real Trading D60",
+                                    "dataUrl":  "/workbook-images/image99.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E60",
+                                     "name":  "Real Trading E60",
+                                     "dataUrl":  "/workbook-images/image100.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  60,
+        "portfolio_risk":  2,
+        "duration_original":  "4.5",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-61",
+        "trade_type":  "real",
+        "date":  "2025-07-12T10:45:00",
+        "pair":  "FTM",
+        "direction":  "",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "unreviewed",
+        "win_loss":  null,
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "4x tested the support line. Entered with the next rejection (HTF) + inefficiency. When the 3rd retest of support line created ineffieincy it was for me sufficient. However, later I noticted that a baerish bullish flag formed. At this point I should have lowered my target to break-even.",
+        "post_notes":  "When I noticed the bearish flag, I was on the jump to Yash and I was uncertain whether there will be another push to the upside. I should\u0027ve reduced my default risk. The trades I took where too high. No risk management.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D61",
+                                    "name":  "Real Trading D61",
+                                    "dataUrl":  "/workbook-images/image101.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E61",
+                                     "name":  "Real Trading E61",
+                                     "dataUrl":  "/workbook-images/image102.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  61,
+        "portfolio_risk":  null,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-62",
+        "trade_type":  "real",
+        "date":  "2025-07-12T15:27:00",
+        "pair":  "FTM",
+        "direction":  "",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "unreviewed",
+        "win_loss":  null,
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D62",
+                                    "name":  "Real Trading D62",
+                                    "dataUrl":  "/workbook-images/image103.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E62",
+                                     "name":  "Real Trading E62",
+                                     "dataUrl":  "/workbook-images/image102.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  62,
+        "portfolio_risk":  null,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-63",
+        "trade_type":  "real",
+        "date":  "2025-07-12T10:35:00",
+        "pair":  "SUI",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  54,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "4h large pinbar candle formed. BTC formed bullish and SUI showed some sort of reversal. Entered at discount and target Golden Fibo.",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D63",
+                                    "name":  "Real Trading D63",
+                                    "dataUrl":  "/workbook-images/image104.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E63",
+                                     "name":  "Real Trading E63",
+                                     "dataUrl":  "/workbook-images/image105.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  63,
+        "portfolio_risk":  null,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-64",
+        "trade_type":  "real",
+        "date":  "2025-07-11T18:00:00",
+        "pair":  "AIXBT",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  -51,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "Entered outside of Asia. BTC created ATH and was up about 1.5%. All altcoins were passive except for AIXBT.\nAfter another pullback at discount level, I entered after bullish shift.",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D64",
+                                    "name":  "Real Trading D64",
+                                    "dataUrl":  "/workbook-images/image106.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  64,
+        "portfolio_risk":  1.75,
+        "duration_original":  "4h",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-65",
+        "trade_type":  "real",
+        "date":  "2025-07-14T10:05:00",
+        "pair":  "WIF",
+        "direction":  "long",
+        "timeframe":  "1m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "unreviewed",
+        "win_loss":  null,
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D65",
+                                    "name":  "Real Trading D65",
+                                    "dataUrl":  "/workbook-images/image107.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  65,
+        "portfolio_risk":  7.5,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-66",
+        "trade_type":  "real",
+        "date":  "2025-07-14T11:25:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "3m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D66",
+                                    "name":  "Real Trading D66",
+                                    "dataUrl":  "/workbook-images/image108.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E66",
+                                     "name":  "Real Trading E66",
+                                     "dataUrl":  "/workbook-images/image109.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  66,
+        "portfolio_risk":  7.5,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-67",
+        "trade_type":  "real",
+        "date":  "2025-07-15T10:31:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "1m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "BTC started negatviely and then rose to the updise. Took out heatmap liquidity. Pulled back, but very shallow. From there, I was opting for reversal at LTF trendline and 76% retracement.",
+        "post_notes":  "While in the trade, I realised that CVD was negative, no new high was formed. Then quick breakout with another storng sell to the downside. Overall,",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D67",
+                                    "name":  "Real Trading D67",
+                                    "dataUrl":  "/workbook-images/image110.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E67",
+                                     "name":  "Real Trading E67",
+                                     "dataUrl":  "/workbook-images/image111.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  67,
+        "portfolio_risk":  3.5,
+        "duration_original":  "5\u0027",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-69",
+        "trade_type":  "real",
+        "date":  "2025-07-16T11:50:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "1m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "BTC started baerish, then turned bullish retracement to opening. Consolidation on 1min ttimeframe.  But what I noticed was that there was no MS on STF.",
+        "post_notes":  "Realised during the trade that buyers did ont step in.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D69",
+                                    "name":  "Real Trading D69",
+                                    "dataUrl":  "/workbook-images/image114.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E69",
+                                     "name":  "Real Trading E69",
+                                     "dataUrl":  "/workbook-images/image115.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  69,
+        "portfolio_risk":  6.1,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-70",
+        "trade_type":  "real",
+        "date":  "2025-07-16T11:40:00",
+        "pair":  "PENGU",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  1,
+        "discipline":  null,
+        "pre_notes":  "Typical btc trade. I was speculating that BTC is bullish and in order to make quickly more money I used this a second trade opportunity.",
+        "post_notes":  "Overall I was tight - BTC correct and came back qutie unsually.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D70",
+                                    "name":  "Real Trading D70",
+                                    "dataUrl":  "/workbook-images/image116.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E70",
+                                     "name":  "Real Trading E70",
+                                     "dataUrl":  "/workbook-images/image117.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  70,
+        "portfolio_risk":  3,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-71",
+        "trade_type":  "real",
+        "date":  "2025-03-10T20:00:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "3m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "Tokyo starke Distribution.\nRetest von orderblock\nTarget ist der 15\u0027 OB",
+        "post_notes":  "Entweder Pre market session, oder 15\u0027 ob. Macht keinen sinn nach sternen zu greifen. Wenn bspw. R1 über 15\u0027 OB dann erstmal nur OB targeten",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Baerisch",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D71",
+                                    "name":  "Real Trading D71",
+                                    "dataUrl":  "/workbook-images/image118.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E71",
+                                     "name":  "Real Trading E71",
+                                     "dataUrl":  "/workbook-images/image119.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  71,
+        "portfolio_risk":  1.85,
+        "duration_original":  "0.15",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-73",
+        "trade_type":  "real",
+        "date":  "2025-09-27T12:45:00",
+        "pair":  "SOL",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "1) 1h baerish, but did not created a new low.\n2) 15\u0027 bullish\n3) 5\u0027 bullish\nThe 5\u0027 key level was not correctly identified. I was observing over phone.",
+        "post_notes":  "I marked the wrong 5\" low. If I had drawn from 15\" I coukd have  had  a 3x",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Undecisive",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D73",
+                                    "name":  "Real Trading D73",
+                                    "dataUrl":  "/workbook-images/image122.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E73",
+                                     "name":  "Real Trading E73",
+                                     "dataUrl":  "/workbook-images/image123.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  73,
+        "portfolio_risk":  1.6,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-74",
+        "trade_type":  "real",
+        "date":  "2025-09-26T00:00:00",
+        "pair":  "BTC",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "loss",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "1) 1h baerish,\n2) 15 FBZ no new low created. Liquidity sweepat 114k with no price movement (absorption). Baerish continuum.",
+        "post_notes":  "I new there was a sell, but i trusted the youtuber instead…",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Baerish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D74",
+                                    "name":  "Real Trading D74",
+                                    "dataUrl":  "/workbook-images/image124.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  74,
+        "portfolio_risk":  3,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-75",
+        "trade_type":  "real",
+        "date":  "2025-09-29T23:30:00",
+        "pair":  "SOL",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  4,
+        "discipline":  null,
+        "pre_notes":  "1) 1h turned into EL and new high formed;\n2) 15\u0027 was bullish waited for pullback; heatmap liquidty sweep. Right after new VOL built\n3) EMA respected+ 4h trendline\n4) CVD was extremely bullish",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "Bullish",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D75",
+                                    "name":  "Real Trading D75",
+                                    "dataUrl":  "/workbook-images/image126.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E75",
+                                     "name":  "Real Trading E75",
+                                     "dataUrl":  "/workbook-images/image127.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  75,
+        "portfolio_risk":  3,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-76",
+        "trade_type":  "real",
+        "date":  "2025-10-01T00:00:00",
+        "pair":  "SOL",
+        "direction":  "",
+        "timeframe":  "",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "unreviewed",
+        "win_loss":  null,
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  null,
+        "discipline":  null,
+        "pre_notes":  "Analysis was right, I just closed the trade without non-sense",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D76",
+                                    "name":  "Real Trading D76",
+                                    "dataUrl":  "/workbook-images/image129.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E76",
+                                     "name":  "Real Trading E76",
+                                     "dataUrl":  "/workbook-images/image130.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  76,
+        "portfolio_risk":  null,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-77",
+        "trade_type":  "real",
+        "date":  "2026-04-21T00:00:00",
+        "pair":  "GOLD",
+        "direction":  "long",
+        "timeframe":  "5m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "closed",
+        "win_loss":  "win",
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  5,
+        "discipline":  null,
+        "pre_notes":  "Over weekend news, Monday was retracement - without pullback. \nTuesday morning started with undecisive pullback. I was waiting to \"take out\" LTF low. Next followed a consolidation. I entered during consolidation, should\u0027ve waited a bit.\nI drew out the support and resistance level which coincided with Pivot level. Overall was on the 1\u0027 TF no real break of structure , however the lvl has also not creatrd a new high.\nChart followed messy pattern, as UK central bank and Trump were posting weird stuff",
+        "post_notes":  "A) wait a bit longer I was entering but had to close, because at consolidation I lost with the sweep to the downside (see blue dot). \nB) I was aiming for a home run - for like 4.85k instead of closing at least with profits.",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D77",
+                                    "name":  "Real Trading D77",
+                                    "dataUrl":  "/workbook-images/image131.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+                                 {
+                                     "id":  "excel-real-E77",
+                                     "name":  "Real Trading E77",
+                                     "dataUrl":  "/workbook-images/image132.png",
+                                     "addedAt":  null,
+                                     "source":  "Trading Journal.xlsm",
+                                     "phase":  "post"
+                                 }
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  77,
+        "portfolio_risk":  null,
+        "duration_original":  "4.5h",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    },
+    {
+        "id":  "excel-real-row-78",
+        "trade_type":  "real",
+        "date":  "2026-04-22T00:00:00",
+        "pair":  "GOLD",
+        "direction":  "long",
+        "timeframe":  "1m",
+        "entry_price":  0,
+        "stop_loss":  0,
+        "take_profit":  0,
+        "status":  "unreviewed",
+        "win_loss":  null,
+        "pnl_dollars":  null,
+        "pnl_currency":  "EUR",
+        "actual_rr":  null,
+        "confidence":  3,
+        "discipline":  null,
+        "pre_notes":  "Gold started bullish - throughout the day and broke the 1\u0027 TF high. Subsequently pulled back. On HTF (5\u0027) this was not signfiicant the pullback.  However, during the day was a 2-3h consolidation with subsequent breakout. Hence At 1\u0027 KL entry, aiming for a continuity model. At 4.8k reisdes a lot of liquidty, as prev-day has accumulated shorts at that level.\nAggressive buyers stepping in - but with lower volume.",
+        "post_notes":  "",
+        "tags":  [
+                     "Excel Import"
+                 ],
+        "session":  "",
+        "btc_outlook":  "",
+        "checklist_score":  null,
+        "checklist_result":  null,
+        "exit_price":  null,
+        "exit_date":  null,
+        "pre_emotion":  "",
+        "post_emotion":  "",
+        "pre_screenshots":  [
+                                {
+                                    "id":  "excel-real-D78",
+                                    "name":  "Real Trading D78",
+                                    "dataUrl":  "/workbook-images/image133.png",
+                                    "addedAt":  null,
+                                    "source":  "Trading Journal.xlsm",
+                                    "phase":  "pre"
+                                }
+                            ],
+        "post_screenshots":  [
+
+                             ],
+        "import_source":  "Trading Journal.xlsm - Real Trading",
+        "workbook_row":  78,
+        "portfolio_risk":  null,
+        "duration_original":  "",
+        "pivot_today":  "",
+        "pivot_yesterday":  ""
+    }
+]

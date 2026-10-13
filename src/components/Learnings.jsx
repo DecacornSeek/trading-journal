@@ -18,6 +18,10 @@ const CAT_COLORS = {
   'Stop Loss': C.red,
   'Session Patterns': C.yellow,
   'Psychology': C.purple,
+  'Market Context': '#06b6d4',
+  'Order Flow': '#f97316',
+  'Risk Management': '#ef4444',
+  'Trading Business': '#ec4899',
 };
 
 const CATEGORIES = Object.keys(CAT_COLORS);
@@ -49,7 +53,8 @@ export default function Learnings({ learnings, onAdd, onDelete }) {
       const q = search.toLowerCase();
       l = l.filter(item =>
         item.title.toLowerCase().includes(q) ||
-        item.description.toLowerCase().includes(q)
+        item.description.toLowerCase().includes(q) ||
+        (item.source || '').toLowerCase().includes(q)
       );
     }
     if (catFilter !== 'all') l = l.filter(item => item.category === catFilter);
@@ -169,6 +174,16 @@ export default function Learnings({ learnings, onAdd, onDelete }) {
               <div style={{ fontWeight: 600, color: C.text, fontSize: 14, lineHeight: 1.4 }}>{item.title}</div>
               {item.description && (
                 <div style={{ fontSize: 13, color: C.muted, lineHeight: 1.6 }}>{item.description}</div>
+              )}
+              {(item.source || item.evidence_status) && (
+                <div style={{
+                  marginTop: 'auto', paddingTop: 8, borderTop: `1px solid ${C.border}`,
+                  display: 'flex', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap',
+                  fontSize: 10.5, color: C.dim,
+                }}>
+                  <span>{item.source || 'User-created'}</span>
+                  {item.evidence_status && <span style={{ color }}>{item.evidence_status}</span>}
+                </div>
               )}
             </div>
           );

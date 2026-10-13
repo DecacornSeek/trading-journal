@@ -173,18 +173,30 @@ export const INITIAL_TAGS = [
 ];
 
 export const CHECKLIST_QUESTIONS = [
-  { id: 1, text: 'HTF trend aligned with my trade? (4H/1H)', auto_red: false },
-  { id: 2, text: 'Price at a Key Level / POI?', auto_red: false },
-  { id: 3, text: 'Clear entry signal? (BOS, Liquidity Sweep, Engulfing)', auto_red: false },
-  { id: 4, text: 'Confluence? (≥2 factors: Fib, EMA, HTF, Volume)', auto_red: false },
-  { id: 5, text: 'R:R ≥ 2:1 and SL at swing point?', auto_red: false },
-  { id: 6, text: 'Is this a revenge trade or emotional?', auto_red: true },
-  { id: 7, text: 'Am I following MY system? (not a YouTuber)', auto_red: true },
+  { id: 1, text: 'High-impact news checked and trade clear of the release window?', blocker: true },
+  { id: 2, text: 'Do current overnight events and conditions warrant trading?', blocker: true },
+  { id: 3, text: 'Opening gap classified and its fundamental/technical story understood?', blocker: false, naAllowed: true },
+  { id: 4, text: 'Market classified as balance, trend, or transition?', blocker: true },
+  { id: 5, text: 'Weekly VPOC direction and global money-flow context identified?', blocker: false },
+  { id: 6, text: 'Value Area / HVN business zones A and B marked?', blocker: true },
+  { id: 7, text: 'Daily road map defines fast, sideways, and continuation areas?', blocker: true },
+  { id: 8, text: 'Order-flow proof confirms the road map at the intended level?', blocker: true },
+  { id: 9, text: 'Cash-open range and liquidity align with the road map?', blocker: true, naAllowed: true },
+  { id: 10, text: 'Emotion, focus, and environment are suitable for trading?', blocker: true },
+  { id: 11, text: 'Hard stop, size, total risk ≤0.5%, and target math verified?', blocker: true },
 ];
 
 export const INITIAL_SETTINGS = {
   portfolioSize: '10000',
-  defaultRiskPct: '1',
+  defaultRiskPct: '0.5',
   anthropicApiKey: '',
   aiMode: 'claudecom', // 'api' | 'claudecom'
+  challengeEnabled: true,
+  challengeCurrentBalance: '10000',
+  challengeCurrentEquity: '10000',
+  challengeDayStartBalance: '10000',
+  challengeRiskPerTrade: '50',
+  challengePersonalDailyStop: '100',
+  challengeMaxTradesPerDay: '2',
+  challengeTradesToday: '0',
 };

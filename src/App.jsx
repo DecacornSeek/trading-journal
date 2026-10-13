@@ -8,10 +8,61 @@ import Learnings from './components/Learnings'
 import Settings from './components/Settings'
 import { Calculator, FloatingCalc } from './components/Calculator'
 import { SAMPLE_TRADES, SAMPLE_LEARNINGS, INITIAL_TAGS, INITIAL_SETTINGS } from './data/sampleData'
+import { JULY_2026_TRADES } from './data/july2026Trades'
+import WORKBOOK_TRADES from './data/workbookTrades.json'
+import EXCEL_LEARNINGS from './data/excelLearnings.json'
+import { FRAMEWORK_LEARNINGS } from './data/frameworkLearnings'
+
+const JULY_2026_MIGRATION_KEY = 'tradelog_migration_july_2026_v4'
+const WORKBOOK_MIGRATION_KEY = 'tradelog_migration_excel_real_v1'
+const DEMO_LEARNINGS_MIGRATION_KEY = 'tradelog_migration_remove_demo_learnings_v1'
+const CURATED_LEARNINGS_MIGRATION_KEY = 'tradelog_migration_curated_learnings_v1'
 
 function loadLS(key, fallback) {
   try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
   catch { return fallback; }
+}
+
+function loadTrades() {
+  const existing = loadLS('tradelog_trades', [])
+  const julyMigrated = localStorage.getItem(JULY_2026_MIGRATION_KEY)
+  const workbookMigrated = localStorage.getItem(WORKBOOK_MIGRATION_KEY)
+  if (julyMigrated && workbookMigrated) return existing
+
+  const preserved = existing.filter(trade => (
+    !SAMPLE_TRADES.some(sample => (
+      sample.id === trade.id && sample.date === trade.date && sample.pair === trade.pair
+    ))
+  ))
+  const existingIds = new Set(preserved.map(trade => trade.id))
+  const additions = [
+    ...(!julyMigrated ? JULY_2026_TRADES : []),
+    ...(!workbookMigrated ? WORKBOOK_TRADES : []),
+  ].filter(trade => !existingIds.has(trade.id))
+  const merged = [...additions, ...preserved].sort((a, b) => new Date(b.date) - new Date(a.date))
+  localStorage.setItem('tradelog_trades', JSON.stringify(merged))
+  if (!julyMigrated) localStorage.setItem(JULY_2026_MIGRATION_KEY, new Date().toISOString())
+  if (!workbookMigrated) localStorage.setItem(WORKBOOK_MIGRATION_KEY, new Date().toISOString())
+  return merged
+}
+
+function loadLearnings() {
+  const existing = loadLS('tradelog_learnings', [])
+  const demoCleaned = localStorage.getItem(DEMO_LEARNINGS_MIGRATION_KEY)
+  const curatedMigrated = localStorage.getItem(CURATED_LEARNINGS_MIGRATION_KEY)
+  if (demoCleaned && curatedMigrated) return existing
+
+  const cleaned = demoCleaned ? existing : existing.filter(learning => !SAMPLE_LEARNINGS.some(sample => (
+    sample.id === learning.id && sample.date === learning.date && sample.title === learning.title
+  )))
+  const existingIds = new Set(cleaned.map(learning => learning.id))
+  const additions = curatedMigrated ? [] : [...EXCEL_LEARNINGS, ...FRAMEWORK_LEARNINGS]
+    .filter(learning => !existingIds.has(learning.id))
+  const merged = [...additions, ...cleaned]
+  localStorage.setItem('tradelog_learnings', JSON.stringify(merged))
+  if (!demoCleaned) localStorage.setItem(DEMO_LEARNINGS_MIGRATION_KEY, new Date().toISOString())
+  if (!curatedMigrated) localStorage.setItem(CURATED_LEARNINGS_MIGRATION_KEY, new Date().toISOString())
+  return merged
 }
 
 const PAGE_LABELS = {
@@ -26,10 +77,13 @@ const PAGE_LABELS = {
 
 export default function App() {
   const [page, setPage] = useState(() => sessionStorage.getItem('tradelog_page') || 'dashboard')
-  const [trades, setTrades] = useState(() => loadLS('tradelog_trades', SAMPLE_TRADES))
-  const [learnings, setLearnings] = useState(() => loadLS('tradelog_learnings', SAMPLE_LEARNINGS))
+  const [trades, setTrades] = useState(loadTrades)
+  const [learnings, setLearnings] = useState(loadLearnings)
   const [tags, setTags] = useState(() => loadLS('tradelog_tags', INITIAL_TAGS))
-  const [settings, setSettings] = useState(() => loadLS('tradelog_settings', INITIAL_SETTINGS))
+  const [settings, setSettings] = useState(() => ({
+    ...INITIAL_SETTINGS,
+    ...loadLS('tradelog_settings', {}),
+  }))
   const [selectedTrade, setSelectedTrade] = useState(null)
   const [editTrade, setEditTrade] = useState(null)
 
@@ -41,7 +95,7 @@ export default function App() {
 
   const navigateTo = useCallback((p) => {
     setSelectedTrade(null)
-    if (p !== 'new-trade') setEditTrade(null)
+    setEditTrade(null)
     setPage(p)
   }, [])
 
@@ -113,10 +167,10 @@ export default function App() {
             />
           )}
           {page === 'new-trade' && (
-            <NewTrade tags={tags} editTrade={editTrade} onSave={handleSaveTrade} />
+            <NewTrade key={editTrade?.id || 'new'} tags={tags} editTrade={editTrade} settings={settings} onSave={handleSaveTrade} />
           )}
           {page === 'coach' && (
-            <Coach trades={trades} learnings={learnings} />
+            <Coach trades={trades} learnings={learnings} settings={settings} />
           )}
           {page === 'calculator' && (
             <Calculator navigateTo={navigateTo} />

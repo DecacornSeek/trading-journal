@@ -1,5 +1,7 @@
 import { useState, useRef, useMemo, useCallback } from 'react';
 import { callClaude, getAiMode, buildCoachPrompt } from '../lib/claude';
+import { buildCoachSystemPrimer } from '../lib/coachContext';
+import { CLASSIC_ONE_STEP_10K, getChallengeMetrics } from '../data/challengeRules';
 
 const C = {
   card: '#1a1d27', border: '#1e2130', border2: '#2a2e39',
@@ -8,11 +10,45 @@ const C = {
 };
 
 const QUICK_PROMPTS = [
-  'Analyse my recent losing streak',
-  'What patterns do you see in my best trades?',
-  'How can I improve my discipline score?',
-  'Am I trading my system consistently?',
+  'Can I safely take another trade today?',
+  'Audit my challenge risk and breach buffer',
+  'Which behavior is most likely to fail this challenge?',
+  'Build a two-trade plan for my next session',
 ];
+
+function ChallengeStatusCard({ settings }) {
+  const metrics = getChallengeMetrics(settings);
+  const blocked = metrics.dailyLimitBreached || metrics.drawdownBreached
+    || metrics.personalStopReached || metrics.tradeLimitReached;
+  const statusColor = blocked ? C.red : metrics.permittedRiskNow < metrics.riskPerTrade ? C.yellow : C.green;
+  return (
+    <div style={{ background: C.card, border: `1px solid ${statusColor}55`, borderRadius: 12, padding: 16 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, marginBottom: 10 }}>
+        <div>
+          <div style={{ fontWeight: 700, color: C.text, fontSize: 13 }}>Challenge status</div>
+          <div style={{ color: C.dim, fontSize: 10.5, marginTop: 2 }}>{CLASSIC_ONE_STEP_10K.name}</div>
+        </div>
+        <span style={{ color: statusColor, fontSize: 10.5, fontWeight: 700 }}>
+          {blocked ? 'STOP' : 'ACTIVE'}
+        </span>
+      </div>
+      {[
+        ['Balance', `$${metrics.currentBalance.toFixed(2)}`],
+        ['Equity', `$${metrics.currentEquity.toFixed(2)}`],
+        ['To target', `$${metrics.targetRemaining.toFixed(2)}`],
+        ['Daily buffer', `$${metrics.dailyLossRemaining.toFixed(2)}`],
+        ['Floor buffer', `$${metrics.drawdownRemaining.toFixed(2)}`],
+        ['Risk allowed now', `$${metrics.permittedRiskNow.toFixed(2)}`],
+        ['Trades today', `${metrics.tradesToday} / ${metrics.maxTradesPerDay}`],
+      ].map(([label, value]) => (
+        <div key={label} style={{ display: 'flex', justifyContent: 'space-between', gap: 8, fontSize: 11.5, marginBottom: 5 }}>
+          <span style={{ color: C.muted }}>{label}</span>
+          <span style={{ color: label === 'Risk allowed now' ? statusColor : C.text, fontWeight: 600 }}>{value}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function TypingDots() {
   return (
@@ -129,7 +165,7 @@ function EmptyState({ onPrompt }) {
 }
 
 // ─── Claude.com mode (no API key needed) ─────────────────────────────────────
-function ClaudeComMode({ systemPrimer, trades, learnings }) {
+function ClaudeComMode({ systemPrimer, trades, learnings, settings }) {
   const [question, setQuestion] = useState('');
   const [toast, setToast] = useState('');
 
@@ -153,6 +189,8 @@ function ClaudeComMode({ systemPrimer, trades, learnings }) {
   const handleKey = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); openInClaude(); }
   };
+
+  const reviewedReal = trades.filter(trade => trade.trade_type === 'real' && trade.status === 'closed');
 
   return (
     <div style={{ padding: '0 24px', display: 'flex', gap: 20, height: 'calc(100vh - 112px)' }}>
@@ -272,13 +310,17 @@ function ClaudeComMode({ systemPrimer, trades, learnings }) {
 
       {/* Right sidebar */}
       <div style={{ width: 220, flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <ChallengeStatusCard settings={settings} />
         <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16 }}>
           <div style={{ fontWeight: 600, color: C.text, marginBottom: 12, fontSize: 13 }}>Context loaded</div>
           {[
             ['Trades', trades.length, C.text],
+            ['Reviewed real', reviewedReal.length, C.text],
+            ['Challenge', trades.filter(trade => trade.challenge_trade === true).length, C.blue],
+            ['Wins', reviewedReal.filter(trade => trade.win_loss === 'win').length, '#22c55e'],
+            ['Losses', reviewedReal.filter(trade => trade.win_loss === 'loss').length, '#ef4444'],
+            ['Unreviewed', trades.filter(trade => trade.status === 'unreviewed').length, C.yellow],
             ['Lessons', learnings.length, C.text],
-            ['Wins', trades.filter(t => t.win_loss === 'win').length, '#22c55e'],
-            ['Losses', trades.filter(t => t.win_loss === 'loss').length, '#ef4444'],
           ].map(([label, val, color]) => (
             <div key={label} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12.5, marginBottom: 6 }}>
               <span style={{ color: C.muted }}>{label}</span>
@@ -298,31 +340,15 @@ function ClaudeComMode({ systemPrimer, trades, learnings }) {
 }
 
 // ─── Coach ────────────────────────────────────────────────────────────────────
-export default function Coach({ trades, learnings }) {
+export default function Coach({ trades, learnings, settings }) {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef(null);
 
   const systemPrimer = useMemo(() => {
-    const tradeJson = JSON.stringify(trades, null, 2);
-    const lessonJson = JSON.stringify(learnings, null, 2);
-    return `You are a professional trading coach specialised in the NCI (No Cap Intelligence) ICT-based trading system.
-
-TRADER'S FULL JOURNAL DATA:
-Trades: ${tradeJson}
-
-Learnings: ${lessonJson}
-
-COACHING RULES:
-1. Be specific and data-driven. Reference actual trades by pair and date.
-2. Don't give generic advice — tie every insight to the trader's real data.
-3. Use NCI terminology: HTF bias, PD arrays, liquidity sweeps, BOS, FVG, OB, displacement.
-4. Be direct but encouraging. Point out patterns both good and bad.
-5. If you see revenge trading or emotional trades, flag them clearly.
-6. Always suggest one concrete rule or process improvement at the end.
-7. Keep responses concise — use bullet points for analysis.`;
-  }, [trades, learnings]);
+    return buildCoachSystemPrimer({ trades, learnings, settings });
+  }, [trades, learnings, settings]);
 
   const scrollToBottom = () => {
     setTimeout(() => {
@@ -369,7 +395,7 @@ COACHING RULES:
   // Route to Claude.com mode if selected in settings
   const aiMode = getAiMode();
   if (aiMode === 'claudecom') {
-    return <ClaudeComMode systemPrimer={systemPrimer} trades={trades} learnings={learnings} />;
+    return <ClaudeComMode systemPrimer={systemPrimer} trades={trades} learnings={learnings} settings={settings} />;
   }
 
   return (
@@ -424,6 +450,7 @@ COACHING RULES:
 
       {/* Right sidebar */}
       <div style={{ width: 230, flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <ChallengeStatusCard settings={settings} />
         <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16 }}>
           <div style={{ fontWeight: 600, color: C.text, marginBottom: 12, fontSize: 13 }}>Quick Prompts</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>

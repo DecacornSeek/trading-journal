@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { formatPnlGroups, groupPnlByCurrency } from '../lib/tradeFormatting';
 
 const NAV_ITEMS = [
   { id: 'dashboard', label: 'Dashboard', icon: '▦' },
@@ -68,13 +69,9 @@ export default function Sidebar({ page, navigateTo, trades }) {
     const real = trades.filter(t => t.trade_type === 'real' && t.status === 'closed');
     const wins = real.filter(t => t.win_loss === 'win');
     const winRate = real.length ? Math.round((wins.length / real.length) * 100) : 0;
-    const totalPnl = real.reduce((s, t) => s + (t.pnl_dollars || 0), 0);
-
     // Today's PnL
     const today = new Date().toDateString();
-    const todayPnl = real
-      .filter(t => new Date(t.date).toDateString() === today)
-      .reduce((s, t) => s + (t.pnl_dollars || 0), 0);
+    const todayTrades = real.filter(t => new Date(t.date).toDateString() === today);
 
     // Week PnL (Mon-Sun)
     const now = new Date();
@@ -82,9 +79,7 @@ export default function Sidebar({ page, navigateTo, trades }) {
     const monday = new Date(now);
     monday.setDate(now.getDate() - (dayOfWeek === 0 ? 6 : dayOfWeek - 1));
     monday.setHours(0, 0, 0, 0);
-    const weekPnl = real
-      .filter(t => new Date(t.date) >= monday)
-      .reduce((s, t) => s + (t.pnl_dollars || 0), 0);
+    const weekTrades = real.filter(t => new Date(t.date) >= monday);
 
     // Loss streak
     const sorted = [...real].sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -94,13 +89,11 @@ export default function Sidebar({ page, navigateTo, trades }) {
       else break;
     }
 
-    return { winRate, totalPnl, todayPnl, weekPnl, streak };
+    return { winRate, todayTrades, weekTrades, streak };
   }, [trades]);
 
-  const fmt = (n) => {
-    const sign = n >= 0 ? '+' : '';
-    return `${sign}$${Math.abs(n).toFixed(0)}`;
-  };
+  const todayGroups = groupPnlByCurrency(stats.todayTrades);
+  const weekGroups = groupPnlByCurrency(stats.weekTrades);
 
   return (
     <aside style={S.aside}>
@@ -132,14 +125,14 @@ export default function Sidebar({ page, navigateTo, trades }) {
       <div style={S.bottom}>
         <div style={S.statRow}>
           <span style={S.statLabel}>Today P&L</span>
-          <span style={S.statVal(stats.todayPnl >= 0 ? '#22c55e' : '#ef4444')}>
-            {fmt(stats.todayPnl)}
+          <span style={S.statVal('#e2e8f0')}>
+            {formatPnlGroups(todayGroups, 0)}
           </span>
         </div>
         <div style={S.statRow}>
           <span style={S.statLabel}>This Week</span>
-          <span style={S.statVal(stats.weekPnl >= 0 ? '#22c55e' : '#ef4444')}>
-            {fmt(stats.weekPnl)}
+          <span style={S.statVal('#e2e8f0')}>
+            {formatPnlGroups(weekGroups, 0)}
           </span>
         </div>
         <div style={S.statRow}>

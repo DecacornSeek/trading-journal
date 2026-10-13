@@ -1,0 +1,98 @@
+export const FRAMEWORK_LEARNINGS = [
+  {
+    id: 'framework-learning-context-before-setup', date: '2026-08-02', category: 'Market Context',
+    title: 'Context comes before setup',
+    description: 'Decide whether conditions warrant trading, classify structure, locate value, and build a road map before looking for an entry trigger. A setup without a market story is not sufficient proof.',
+    source: 'Professional context-first framework', evidence_status: 'Process rule',
+  },
+  {
+    id: 'framework-learning-news-window', date: '2026-08-02', category: 'Risk Management',
+    title: 'Map news before taking intraday risk',
+    description: 'Mark scheduled high-impact releases and avoid carrying unmanaged exposure through the release window. News trading may be allowed by the firm while still being inappropriate for the plan.',
+    source: 'Professional context-first framework', evidence_status: 'Risk-control rule',
+  },
+  {
+    id: 'framework-learning-gap-story', date: '2026-08-02', category: 'Market Context',
+    title: 'Classify the story behind an opening gap',
+    description: 'Distinguish a fundamental or breakaway gap from a technical gap that may close. Record Unclear when the cause is unknown rather than forcing a directional narrative.',
+    source: 'Professional context-first framework', evidence_status: 'Hypothesis to test',
+  },
+  {
+    id: 'framework-learning-balance-trend', date: '2026-08-02', category: 'Market Context',
+    title: 'Balance and aggressive trend require different tactics',
+    description: 'Classify balance, aggressive trend, or transition first. Balance favors rotation and responsive trades; trend favors continuation unless order flow demonstrates rejection.',
+    source: 'Professional context-first framework', evidence_status: 'Hypothesis to test',
+  },
+  {
+    id: 'framework-learning-vpoc-flow', date: '2026-08-02', category: 'Market Context',
+    title: 'Use weekly VPOC as context, not a signal',
+    description: 'Rising, falling, or flat weekly VPOCs provide evidence about where accepted value is migrating. VPOC direction should support the road map but does not independently justify entry.',
+    source: 'Professional context-first framework', evidence_status: 'Hypothesis to test',
+  },
+  {
+    id: 'framework-learning-business-zones', date: '2026-08-02', category: 'Market Context',
+    title: 'Define business zones A and B',
+    description: 'Use prior Value Areas and High Volume Nodes to identify the decision area A and destination B. The route between them should define invalidation, expected speed, and rotation risk.',
+    source: 'Professional context-first framework', evidence_status: 'Process rule',
+  },
+  {
+    id: 'framework-learning-roadmap', date: '2026-08-02', category: 'Entry Model',
+    title: 'Write the daily road map before execution',
+    description: 'Specify where price should move quickly through low volume, rotate around high volume, reject, continue, and invalidate the premise. Use the cash open to confirm or veto that map.',
+    source: 'Professional context-first framework', evidence_status: 'Process rule',
+  },
+  {
+    id: 'framework-learning-proof', date: '2026-08-02', category: 'Order Flow',
+    title: 'An idea needs proof at the planned area',
+    description: 'Require observed PbD, footprint, speed/lethargy, absorption, front-running, or another defined order-flow response at the business zone before committing capital.',
+    source: 'Professional context-first framework', evidence_status: 'Process rule',
+  },
+  {
+    id: 'framework-learning-speed-lethargy', date: '2026-08-02', category: 'Order Flow',
+    title: 'Test speed versus lethargy at low volume',
+    description: 'Sustained speed through a low-volume area is evidence for aggressive participation; slowing or lethargy is evidence for rejection and rotation. These are contextual hypotheses, not automatic signals.',
+    source: 'Professional context-first framework', evidence_status: 'Hypothesis to test',
+  },
+  {
+    id: 'framework-learning-absorption-frontrun', date: '2026-08-02', category: 'Order Flow',
+    title: 'Separate absorption from front-running',
+    description: 'Absorption requires liquidity to be actively traded into. A reversal before advertised liquidity is reached is front-running. Label the observed behavior rather than treating every visible order as absorption.',
+    source: 'Professional context-first framework', evidence_status: 'Hypothesis to test',
+  },
+  {
+    id: 'framework-learning-break-in', date: '2026-08-02', category: 'Order Flow',
+    title: 'Treat value-area break-ins as a testable momentum condition',
+    description: 'A return into old accepted value can trigger rapid unwinding and movement. Record the break-in and proof, but do not assume institutional panic or a fixed participant percentage without evidence.',
+    source: 'Professional context-first framework', evidence_status: 'Hypothesis to test',
+  },
+  {
+    id: 'framework-learning-fragmented', date: '2026-08-02', category: 'Entry Model',
+    title: 'Evaluate fragmented execution as one campaign',
+    description: 'Multiple same-direction entries toward B may realize profits more frequently than one A-to-B hold, but all legs, costs, and simultaneous risk must be aggregated before comparing performance.',
+    source: 'Professional context-first framework', evidence_status: 'Hypothesis to test',
+  },
+  {
+    id: 'framework-learning-readiness', date: '2026-08-02', category: 'Psychology',
+    title: 'Personal readiness is a trade condition',
+    description: 'Do not trade when at work, distracted, emotionally activated, or trying to repair a loss. Environmental and emotional readiness belongs in the pre-trade decision, not only the post-mortem.',
+    source: 'Professional context-first framework', evidence_status: 'Risk-control rule',
+  },
+  {
+    id: 'framework-learning-risk-half-percent', date: '2026-08-02', category: 'Risk Management',
+    title: 'Verify total trade risk at or below 0.5%',
+    description: 'Calculate size from the hard stop and include expected commission, slippage, funding, and correlated open exposure. For the current $10K challenge, the personal default is $50 total risk.',
+    source: 'Professional context-first framework', evidence_status: 'Current personal guardrail',
+  },
+  {
+    id: 'framework-learning-prop-kpis', date: '2026-08-02', category: 'Trading Business',
+    title: 'Prop portfolio KPIs require attempt-level records',
+    description: 'Average cost to funded requires all evaluation fees and successful funded accounts. Payout expectancy requires payout probability and average payout. Do not infer either from individual trade history.',
+    source: 'Professional context-first framework', evidence_status: 'Data requirement',
+  },
+  {
+    id: 'framework-learning-kelly-net-wealth', date: '2026-08-02', category: 'Trading Business',
+    title: 'Kelly and net wealth need honest inputs',
+    description: 'Use Kelly only with credible independent probabilities and payoff data, and cap it aggressively. Net wealth planning must use the trader\'s actual tax jurisdiction, evaluation costs, payouts, and living expenses rather than a universal tax percentage.',
+    source: 'Professional context-first framework', evidence_status: 'Evidence boundary',
+  },
+];

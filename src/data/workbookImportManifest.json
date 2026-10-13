@@ -1,0 +1,25 @@
+{
+    "source":  "C:\\Users\\ericl\\OneDrive\\Trading Journal.xlsm",
+    "sourceSha256":  "0071ae25d2854c9a818bb80af0891b335cb6e401737e7e2349f4c9dba03400db",
+    "sheet":  "Real Trading",
+    "sourceRows":  "4:78",
+    "importedTrades":  62,
+    "excludedRows":  [
+                         36,
+                         45,
+                         52,
+                         54,
+                         56,
+                         57,
+                         58,
+                         59,
+                         68,
+                         72
+                     ],
+    "sourcePreImages":  64,
+    "sourcePostImages":  61,
+    "importedPreImages":  55,
+    "importedPostImages":  55,
+    "heatmapImagesNotImported":  8,
+    "pnlCurrency":  "EUR"
+}

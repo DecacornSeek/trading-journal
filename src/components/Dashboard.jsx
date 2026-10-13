@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
+import { formatPnlGroups, formatPnlValue, formatTradePnl, getTradeCurrency, groupPnlByCurrency, pnlTone } from '../lib/tradeFormatting';
 
 const C = {
   bg: '#131722', card: '#1a1d27', border: '#1e2130', border2: '#2a2e39',
@@ -37,7 +38,8 @@ function GaugeCard({ label, trades, color }) {
   const wins = closed.filter(t => t.win_loss === 'win');
   const losses = closed.filter(t => t.win_loss === 'loss');
   const pct = closed.length ? Math.round((wins.length / closed.length) * 100) : 0;
-  const pnl = closed.reduce((s, t) => s + (t.pnl_dollars || 0), 0);
+  const pnlGroups = groupPnlByCurrency(closed);
+  const tone = pnlTone(pnlGroups);
 
   return (
     <div style={{
@@ -53,8 +55,12 @@ function GaugeCard({ label, trades, color }) {
           {' / '}
           <span style={{ color: C.red }}>{losses.length}L</span>
         </div>
-        <div style={{ fontSize: 13, fontWeight: 600, color: pnl >= 0 ? C.green : C.red, marginTop: 2 }}>
-          {pnl >= 0 ? '+' : ''}${Math.abs(pnl).toFixed(0)}
+        <div style={{
+          fontSize: 12, fontWeight: 600,
+          color: tone === 'positive' ? C.green : tone === 'negative' ? C.red : C.yellow,
+          marginTop: 2, textAlign: 'center',
+        }}>
+          {formatPnlGroups(pnlGroups, 0)}
         </div>
       </div>
     </div>
@@ -74,18 +80,15 @@ function Calendar({ trades }) {
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const firstDow = new Date(year, month, 1).getDay(); // 0=Sun
 
-  // Build day→pnl map for real closed trades
-  const dayMap = useMemo(() => {
-    const m = {};
-    trades.forEach(t => {
-      if (t.trade_type !== 'real' || t.status !== 'closed') return;
-      const d = new Date(t.date);
-      if (d.getFullYear() !== year || d.getMonth() !== month) return;
-      const key = d.getDate();
-      m[key] = (m[key] || 0) + (t.pnl_dollars || 0);
-    });
-    return m;
-  }, [trades, year, month]);
+  // Build day→trades map for real closed trades
+  const dayMap = {};
+  trades.forEach(t => {
+    if (t.trade_type !== 'real' || t.status !== 'closed') return;
+    const d = new Date(t.date);
+    if (d.getFullYear() !== year || d.getMonth() !== month) return;
+    const key = d.getDate();
+    dayMap[key] = [...(dayMap[key] || []), t];
+  });
 
   const cells = [];
   // empty cells for first dow
@@ -113,10 +116,13 @@ function Calendar({ trades }) {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 3 }}>
         {cells.map((day, i) => {
           if (day === null) return <div key={`e${i}`} />;
-          const pnl = dayMap[day];
+          const dayTrades = dayMap[day];
           const isToday = isThisMonth && day === todayDay;
           let bg = 'transparent';
-          if (pnl !== undefined) bg = pnl >= 0 ? 'rgba(34,197,94,0.18)' : 'rgba(239,68,68,0.18)';
+          const dayGroups = dayTrades ? groupPnlByCurrency(dayTrades) : {};
+          const tone = pnlTone(dayGroups);
+          if (dayTrades) bg = tone === 'positive' ? 'rgba(34,197,94,0.18)'
+            : tone === 'negative' ? 'rgba(239,68,68,0.18)' : 'rgba(245,158,11,0.18)';
           return (
             <div key={day} style={{
               height: 44, borderRadius: 6, background: bg,
@@ -125,9 +131,12 @@ function Calendar({ trades }) {
               fontSize: 12,
             }}>
               <span style={{ color: isToday ? C.blue : C.muted, fontWeight: isToday ? 700 : 400 }}>{day}</span>
-              {pnl !== undefined && (
-                <span style={{ fontSize: 10, color: pnl >= 0 ? C.green : C.red, fontWeight: 600 }}>
-                  {pnl >= 0 ? '+' : ''}{Math.abs(pnl) >= 1000 ? `${(pnl / 1000).toFixed(1)}k` : pnl.toFixed(0)}
+              {dayTrades && (
+                <span style={{
+                  fontSize: 9, color: tone === 'positive' ? C.green : tone === 'negative' ? C.red : C.yellow,
+                  fontWeight: 600,
+                }}>
+                  {formatPnlGroups(dayGroups, 0)}
                 </span>
               )}
             </div>
@@ -156,7 +165,12 @@ function computeInsights(trades) {
   }
 
   // Low-discipline losses
-  const lowDiscLosses = real.filter(t => t.win_loss === 'loss' && (t.discipline || 0) <= 2).length;
+  const lowDiscLosses = real.filter(t => (
+    t.win_loss === 'loss'
+    && t.discipline != null
+    && Number.isFinite(Number(t.discipline))
+    && Number(t.discipline) <= 2
+  )).length;
   if (lowDiscLosses >= 2) {
     insights.push({ type: 'warn', text: `${lowDiscLosses} losses had discipline ≤2. Review trade management habits.` });
   }
@@ -226,19 +240,36 @@ export default function Dashboard({ trades, navigateTo }) {
   const losses = real.filter(t => t.win_loss === 'loss');
   const winRate = real.length ? Math.round((wins.length / real.length) * 100) : 0;
 
-  const totalPnl = real.reduce((s, t) => s + (t.pnl_dollars || 0), 0);
-  const grossWin = wins.reduce((s, t) => s + (t.pnl_dollars || 0), 0);
-  const grossLoss = Math.abs(losses.reduce((s, t) => s + (t.pnl_dollars || 0), 0));
-  const profitFactor = grossLoss ? (grossWin / grossLoss).toFixed(2) : wins.length ? '∞' : '0';
-  const avgRR = real.length
-    ? (real.filter(t => t.actual_rr).reduce((s, t) => s + (t.actual_rr || 0), 0) / real.filter(t => t.actual_rr).length || 0).toFixed(2)
+  const totalPnlGroups = groupPnlByCurrency(real);
+  const totalTone = pnlTone(totalPnlGroups);
+  const currencies = [...new Set(real.map(getTradeCurrency))];
+  const profitFactor = currencies.map(currency => {
+    const currencyTrades = real.filter(trade => getTradeCurrency(trade) === currency);
+    const grossWin = currencyTrades.filter(trade => (trade.pnl_dollars || 0) > 0)
+      .reduce((sum, trade) => sum + trade.pnl_dollars, 0);
+    const grossLoss = Math.abs(currencyTrades.filter(trade => (trade.pnl_dollars || 0) < 0)
+      .reduce((sum, trade) => sum + trade.pnl_dollars, 0));
+    const value = grossLoss ? (grossWin / grossLoss).toFixed(2) : grossWin ? '∞' : '—';
+    return `${currency} ${value}`;
+  }).join(' · ');
+  const rrTrades = real.filter(t => Number.isFinite(t.actual_rr));
+  const avgRR = rrTrades.length
+    ? (rrTrades.reduce((s, t) => s + t.actual_rr, 0) / rrTrades.length).toFixed(2)
     : '—';
-  const bestTrade = wins.length ? Math.max(...wins.map(t => t.pnl_dollars || 0)) : 0;
-  const worstTrade = losses.length ? Math.min(...losses.map(t => t.pnl_dollars || 0)) : 0;
+  const bestTrade = currencies.map(currency => {
+    const values = wins.filter(trade => getTradeCurrency(trade) === currency && Number.isFinite(trade.pnl_dollars))
+      .map(trade => trade.pnl_dollars);
+    return values.length ? formatPnlValue(Math.max(...values), currency) : null;
+  }).filter(Boolean).join(' · ') || '—';
+  const worstTrade = currencies.map(currency => {
+    const values = losses.filter(trade => getTradeCurrency(trade) === currency && Number.isFinite(trade.pnl_dollars))
+      .map(trade => trade.pnl_dollars);
+    return values.length ? formatPnlValue(Math.min(...values), currency) : null;
+  }).filter(Boolean).join(' · ') || '—';
 
-  const longs = trades.filter(t => t.direction === 'long');
-  const shorts = trades.filter(t => t.direction === 'short');
-  const insights = useMemo(() => computeInsights(trades), [trades]);
+  const longs = real.filter(t => t.direction === 'long');
+  const shorts = real.filter(t => t.direction === 'short');
+  const insights = computeInsights(trades);
 
   return (
     <div style={{ padding: '0 24px 32px' }}>
@@ -249,10 +280,10 @@ export default function Dashboard({ trades, navigateTo }) {
         <StatCard label="Profit Factor" value={profitFactor}
           color={parseFloat(profitFactor) >= 1.5 ? C.green : parseFloat(profitFactor) >= 1 ? C.yellow : C.red} />
         <StatCard label="Avg R:R" value={avgRR} />
-        <StatCard label="Total P&L" value={`${totalPnl >= 0 ? '+' : ''}$${Math.abs(totalPnl)}`}
-          color={totalPnl >= 0 ? C.green : C.red} />
-        <StatCard label="Best Trade" value={`+$${bestTrade}`} color={C.green} />
-        <StatCard label="Worst Trade" value={`-$${Math.abs(worstTrade)}`} color={C.red} />
+        <StatCard label="Total P&L" value={formatPnlGroups(totalPnlGroups)}
+          color={totalTone === 'positive' ? C.green : totalTone === 'negative' ? C.red : C.yellow} />
+        <StatCard label="Best Trade" value={bestTrade} color={C.green} />
+        <StatCard label="Worst Trade" value={worstTrade} color={C.red} />
         <StatCard label="Total Trades" value={real.length} sub={`${wins.length}W / ${losses.length}L`} />
       </div>
 
@@ -278,7 +309,7 @@ export default function Dashboard({ trades, navigateTo }) {
           <div style={{ display: 'flex', gap: 10 }}>
             <GaugeCard label="Long" trades={longs} color={C.green} />
             <GaugeCard label="Short" trades={shorts} color={C.red} />
-            <GaugeCard label="Overall" trades={trades} color={C.blue} />
+            <GaugeCard label="Overall" trades={real} color={C.blue} />
           </div>
           {/* Recent trades mini-list */}
           <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16, flex: 1 }}>
@@ -302,7 +333,7 @@ export default function Dashboard({ trades, navigateTo }) {
                     <span style={{ fontSize: 12, color: C.yellow }}>OPEN</span>
                   ) : (
                     <span style={{ fontSize: 13, fontWeight: 600, color: (t.pnl_dollars || 0) >= 0 ? C.green : C.red }}>
-                      {(t.pnl_dollars || 0) >= 0 ? '+' : ''}${Math.abs(t.pnl_dollars || 0)}
+                      {formatTradePnl(t)}
                     </span>
                   )}
                 </div>

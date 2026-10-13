@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback } from 'react';
 import { callClaude } from '../lib/claude';
 import { CHECKLIST_QUESTIONS } from '../data/sampleData';
+import { formatTradePnl } from '../lib/tradeFormatting';
 
 const C = {
   bg: '#131722', card: '#1a1d27', border: '#1e2130', border2: '#2a2e39',
@@ -65,6 +66,48 @@ function TagBadge({ name, tags }) {
     }}>
       {name}
     </span>
+  );
+}
+
+function ScreenshotGallery({ title, screenshots }) {
+  if (!screenshots.length) return null;
+  return (
+    <div style={{
+      background: C.card, border: `1px solid ${C.border}`, borderRadius: 10, padding: 16, marginBottom: 16,
+    }}>
+      <div style={{ fontSize: 12, color: C.dim, fontWeight: 600, marginBottom: 10 }}>{title}</div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 10 }}>
+        {screenshots.map(screenshot => (
+          <a
+            key={screenshot.id} href={screenshot.dataUrl} target="_blank" rel="noopener noreferrer"
+            title="Open full-size screenshot"
+            style={{ display: 'block', borderRadius: 8, overflow: 'hidden', border: `1px solid ${C.border2}` }}
+          >
+            <img src={screenshot.dataUrl} alt={screenshot.name || 'Trade chart'} style={{
+              display: 'block', width: '100%', aspectRatio: '16 / 9', objectFit: 'cover',
+            }} />
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MetricGrid({ title, metrics }) {
+  const available = metrics.filter(([, value]) => value !== null && value !== undefined && value !== '');
+  if (!available.length) return null;
+  return (
+    <div style={{ marginBottom: 16 }}>
+      <div style={{ fontSize: 12, color: C.dim, fontWeight: 600, marginBottom: 8 }}>{title}</div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+        {available.map(([label, value]) => (
+          <div key={label} style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 9, padding: '10px 14px' }}>
+            <div style={{ fontSize: 11, color: C.dim, marginBottom: 4 }}>{label}</div>
+            <div style={{ fontSize: 13.5, fontWeight: 600, color: C.text }}>{value}</div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -167,11 +210,13 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
     }
   }, [trade, learnings]);
 
-  const pnlColor = trade.status === 'open' ? C.yellow
-    : (trade.pnl_dollars || 0) >= 0 ? C.green : C.red;
+  const pnlColor = trade.status !== 'closed' ? C.yellow
+    : !Number.isFinite(trade.pnl_dollars) ? C.muted
+    : trade.pnl_dollars >= 0 ? C.green : C.red;
 
   const resultLabel = trade.status === 'open' ? 'OPEN'
-    : trade.win_loss === 'win' ? 'WIN' : 'LOSS';
+    : trade.status === 'unreviewed' ? 'UNREVIEWED'
+    : trade.win_loss === 'win' ? 'WIN' : trade.win_loss === 'loss' ? 'LOSS' : 'CLOSED';
 
   const checklist = CHECKLIST_QUESTIONS;
 
@@ -240,8 +285,7 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
             </div>
             <div style={{ textAlign: 'right' }}>
               <div style={{ fontSize: 28, fontWeight: 800, color: pnlColor }}>
-                {trade.status === 'open' ? 'OPEN'
-                  : `${(trade.pnl_dollars || 0) >= 0 ? '+' : ''}$${Math.abs(trade.pnl_dollars || 0)}`}
+                {trade.status === 'closed' ? formatTradePnl(trade) : resultLabel}
               </div>
               <div style={{
                 marginTop: 4, padding: '4px 12px', borderRadius: 20, display: 'inline-block',
@@ -262,9 +306,9 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
         {/* Price grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginBottom: 16 }}>
           {[
-            ['Entry', trade.entry_price],
-            ['Stop Loss', trade.stop_loss],
-            ['Take Profit', trade.take_profit],
+            ['Entry', trade.entry_price || '—'],
+            ['Stop Loss', trade.stop_loss || '—'],
+            ['Take Profit', trade.take_profit || '—'],
             ['Exit Price', trade.exit_price || '—'],
             ['Date', new Date(trade.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })],
             ['Timeframe', trade.timeframe],
@@ -282,6 +326,47 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
           ))}
         </div>
 
+        <MetricGrid title="PLAN & RISK" metrics={[
+          ['Setup', trade.setup_model],
+          ['Market regime', trade.market_regime],
+          ['Context', trade.execution_context],
+          ['News risk', trade.news_risk],
+          ['Gap', trade.gap_type],
+          ['Weekly VPOC', trade.vpoc_flow],
+          ['Business zone A', trade.business_zone_a],
+          ['Business zone B', trade.business_zone_b],
+          ['Cash open', trade.cash_open_read],
+          ['Order-flow proof', trade.orderflow_proof],
+          ['Observed behavior', trade.orderflow_behavior],
+          ['Execution approach', trade.execution_style],
+          ['Position size', trade.position_size],
+          ['Planned risk', Number.isFinite(trade.planned_risk_dollars) ? `$${trade.planned_risk_dollars.toFixed(2)}` : null],
+          ['Estimated costs', Number.isFinite(trade.estimated_costs) ? `$${trade.estimated_costs.toFixed(2)}` : null],
+          ['Balance before', Number.isFinite(trade.account_balance_before) ? `$${trade.account_balance_before.toFixed(2)}` : null],
+          ['Equity before', Number.isFinite(trade.account_equity_before) ? `$${trade.account_equity_before.toFixed(2)}` : null],
+        ]} />
+
+        {trade.daily_roadmap && (
+          <div style={{
+            background: C.card, border: `1px solid ${C.border}`, borderRadius: 10, padding: 16, marginBottom: 16,
+          }}>
+            <div style={{ fontSize: 12, color: C.dim, fontWeight: 600, marginBottom: 8 }}>DAILY ROAD MAP</div>
+            <div style={{ fontSize: 13.5, color: C.text, whiteSpace: 'pre-wrap', lineHeight: 1.6 }}>
+              {trade.daily_roadmap}
+            </div>
+          </div>
+        )}
+
+        <MetricGrid title="EXECUTION REVIEW" metrics={[
+          ['Realized R', Number.isFinite(trade.actual_rr) ? `${trade.actual_rr.toFixed(2)}R` : null],
+          ['Actual costs', Number.isFinite(trade.actual_costs) ? `$${trade.actual_costs.toFixed(2)}` : null],
+          ['MAE', Number.isFinite(trade.mae_dollars) ? `$${trade.mae_dollars.toFixed(2)}` : null],
+          ['MFE', Number.isFinite(trade.mfe_dollars) ? `$${trade.mfe_dollars.toFixed(2)}` : null],
+          ['Exit reason', trade.exit_reason],
+          ['Followed plan', trade.plan_adherence ? trade.plan_adherence.toUpperCase() : null],
+          ['Rule deviation', trade.rule_violation_notes],
+        ]} />
+
         {/* Notes */}
         {trade.pre_notes && (
           <div style={{
@@ -293,6 +378,10 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
             </pre>
           </div>
         )}
+        <ScreenshotGallery
+          title="PRE-TRADE SCREENSHOTS"
+          screenshots={trade.pre_screenshots || trade.screenshots || []}
+        />
         {trade.post_notes && (
           <div style={{
             background: C.card, border: `1px solid ${C.border}`, borderRadius: 10, padding: 16, marginBottom: 16,
@@ -303,6 +392,7 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
             </pre>
           </div>
         )}
+        <ScreenshotGallery title="POST-TRADE SCREENSHOTS" screenshots={trade.post_screenshots || []} />
 
         {/* Post mortem panel */}
         {pmState.status !== 'idle' && (
@@ -322,15 +412,26 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
       {/* Sidebar */}
       <div style={{ width: 240, flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
         {/* Checklist display */}
-        {trade.checklist_score !== undefined && (
+        {Number.isFinite(trade.checklist_score) && (
           <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16 }}>
             <div style={{ fontSize: 12, fontWeight: 600, color: C.dim, marginBottom: 10 }}>CHECKLIST</div>
             {checklist.map((q, i) => (
               <div key={q.id} style={{ display: 'flex', gap: 8, marginBottom: 7, alignItems: 'flex-start' }}>
-                <span style={{ fontSize: 12, marginTop: 1, flexShrink: 0 }}>
-                  {i < trade.checklist_score ? '✓' : '○'}
+                <span style={{
+                  fontSize: 12, marginTop: 1, flexShrink: 0,
+                  color: trade.checklist_answers?.[i] === 'no' ? C.red
+                    : trade.checklist_answers?.[i] === 'na' ? C.yellow : C.green,
+                }}>
+                  {trade.checklist_answers?.[i] === 'yes' ? '✓'
+                    : trade.checklist_answers?.[i] === 'no' ? '✕'
+                    : trade.checklist_answers?.[i] === 'na' ? '—'
+                    : i < trade.checklist_score ? '✓' : '○'}
                 </span>
-                <span style={{ fontSize: 12, color: i < trade.checklist_score ? C.text : C.dim, lineHeight: 1.4 }}>
+                <span style={{
+                  fontSize: 12,
+                  color: trade.checklist_answers?.[i] || i < trade.checklist_score ? C.text : C.dim,
+                  lineHeight: 1.4,
+                }}>
                   {q.text}
                 </span>
               </div>
@@ -345,7 +446,7 @@ Respond ONLY with valid JSON in this exact shape (no markdown, no extra text):
               fontWeight: 700, fontSize: 12,
             }}>
               {(trade.checklist_result || 'no_trade').toUpperCase().replace('_', ' ')}
-              {' '}({trade.checklist_score}/7)
+              {' '}({trade.checklist_score}/{CHECKLIST_QUESTIONS.length})
             </div>
           </div>
         )}
@@ -405,6 +506,7 @@ export default function Journal({ trades, tags, learnings, onSelectTrade, select
     if (resultFilter === 'wins') t = t.filter(tr => tr.win_loss === 'win');
     else if (resultFilter === 'losses') t = t.filter(tr => tr.win_loss === 'loss');
     else if (resultFilter === 'open') t = t.filter(tr => tr.status === 'open');
+    else if (resultFilter === 'unreviewed') t = t.filter(tr => tr.status === 'unreviewed');
     t.sort((a, b) => {
       let av = a[sortKey], bv = b[sortKey];
       if (sortKey === 'date') { av = new Date(av); bv = new Date(bv); }
@@ -464,6 +566,7 @@ export default function Journal({ trades, tags, learnings, onSelectTrade, select
           <FilterPill label="Wins" active={resultFilter === 'wins'} onClick={() => setResultFilter(resultFilter === 'wins' ? 'all' : 'wins')} />
           <FilterPill label="Losses" active={resultFilter === 'losses'} onClick={() => setResultFilter(resultFilter === 'losses' ? 'all' : 'losses')} />
           <FilterPill label="Open" active={resultFilter === 'open'} onClick={() => setResultFilter(resultFilter === 'open' ? 'all' : 'open')} />
+          <FilterPill label="Unreviewed" active={resultFilter === 'unreviewed'} onClick={() => setResultFilter(resultFilter === 'unreviewed' ? 'all' : 'unreviewed')} />
         </div>
         <span style={{ marginLeft: 'auto', fontSize: 12.5, color: C.dim }}>{filtered.length} trade{filtered.length !== 1 ? 's' : ''}</span>
       </div>
@@ -517,12 +620,12 @@ export default function Journal({ trades, tags, learnings, onSelectTrade, select
                     </span>
                   </td>
                   <td style={{ ...tdStyle, color: C.muted, fontSize: 12.5 }}>{t.timeframe}</td>
-                  <td style={{ ...tdStyle, fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5, color: C.text }}>{t.entry_price}</td>
+                  <td style={{ ...tdStyle, fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5, color: C.text }}>{t.entry_price || '—'}</td>
                   <td style={{ ...tdStyle, fontSize: 13, color: (t.actual_rr || 0) >= 2 ? C.green : C.muted }}>
                     {t.actual_rr ? `${t.actual_rr.toFixed(2)}R` : '—'}
                   </td>
                   <td style={{ ...tdStyle, fontWeight: 600, color: pnlColor }}>
-                    {t.status === 'open' ? '—' : `${(t.pnl_dollars || 0) >= 0 ? '+' : ''}$${Math.abs(t.pnl_dollars || 0)}`}
+                    {t.status === 'closed' ? formatTradePnl(t) : '—'}
                   </td>
                   <td style={tdStyle}><ConfidenceDots value={t.confidence || 0} color={C.blue} /></td>
                   <td style={tdStyle}>
@@ -531,8 +634,10 @@ export default function Journal({ trades, tags, learnings, onSelectTrade, select
                       : <span style={{ color: C.dim, fontSize: 12 }}>—</span>}
                   </td>
                   <td style={tdStyle}>
-                    {t.status === 'open' ? (
-                      <span style={{ fontSize: 11.5, color: C.yellow, fontWeight: 600 }}>OPEN</span>
+                    {t.status !== 'closed' ? (
+                      <span style={{ fontSize: 11.5, color: C.yellow, fontWeight: 600 }}>
+                        {t.status === 'unreviewed' ? 'UNREVIEWED' : 'OPEN'}
+                      </span>
                     ) : (
                       <span style={{
                         fontSize: 11.5, fontWeight: 600, padding: '2px 8px', borderRadius: 5,
